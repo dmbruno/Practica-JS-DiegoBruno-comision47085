@@ -44,7 +44,6 @@ const paquete6 = new Paquete("Paris", 1100, 150);
 
 
 if (Login()) {
-    
     let opcion = prompt("ingresa una opcion : \n1 - Playa \n2 - Montaña \n3 - City \n4 - ver promos");
     switch (opcion) {
         case "1":
