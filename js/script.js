@@ -10,21 +10,22 @@ class Paquete {
         this.precio = this.precio * 1.21;
     }
 }
- let savedPin = "1234";
+let savedPin = "1234";
 
 function Login() {
     let ingresar = false;
     let intentos = 3;
-    for (let i = intentos; i >= 0; i--){
+    for (let i = intentos; i > 0; i--){
         let userPin = prompt("ingresa tu pin");
         if (userPin === savedPin) {
             alert("Bienvendio/a");
             ingresar = true;
-            
+            break;
         } else {
-            alert("error, te quedan " +  i  + " intentos")
+            alert("error, te quedan " + (i-1) + " intentos")
         }
     }
+    return ingresar; //esto hace que que el valor de ingresar sea true , entonces if el login es true + hacer tal cosa
 } 
 
 
@@ -40,7 +41,8 @@ const paquete5 = new Paquete("NYC", 1100, 150);
 const paquete6 = new Paquete("Paris", 1100, 150);
 
 
-
+if (Login()) {
+    
     let opcion = prompt("ingresa una opcion : \n1 - Playa \n2 - Montaña \n3 - City \n4 - ver promos");
     switch (opcion) {
         case "1":
@@ -70,6 +72,7 @@ const paquete6 = new Paquete("Paris", 1100, 150);
                         alert("Ingresaste una opcion invalida");
                     }
                 default:
+                    alert("Ingresaste una opcion invalida");
             }
             break;
         case "2":
@@ -142,5 +145,6 @@ const paquete6 = new Paquete("Paris", 1100, 150);
             break;
     }
 
-
-    
+}else{
+    alert("Tarjeta Retenida");
+}
