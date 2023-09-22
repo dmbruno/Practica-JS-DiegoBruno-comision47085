@@ -6,12 +6,10 @@ class Paquete {
         this.equipaje = equipaje;
         this.vendido = false;
     }
-    sumaIVA() {
-        this.precio = this.precio * 1.21;
-    }
 }
-let savedPin = "1234";
 
+
+let savedPin = "1234";
 function Login() {
     let ingresar = false;
     let intentos = 3;
@@ -25,7 +23,7 @@ function Login() {
             alert("error, te quedan " + (i-1) + " intentos")
         }
     }
-    return ingresar; //esto hace que que el valor de ingresar sea true , entonces if el login es true + hacer tal cosa
+    return ingresar; 
 } 
 
 
@@ -33,12 +31,16 @@ function sumaPaquete(numeroA, numeroB) {
     let resultado = numeroA + numeroB;
     return resultado;
 }
+
+
 const paquete1 = new Paquete("Brasil", 1000, 100);
 const paquete2 = new Paquete("Mexico", 1100, 150);
 const paquete3 = new Paquete("Nepal", 1150, 180);
 const paquete4 = new Paquete("Tailandia", 1200, 190);
 const paquete5 = new Paquete("NYC", 1100, 150);
 const paquete6 = new Paquete("Paris", 1100, 150);
+
+
 
 
 if (Login()) {
@@ -146,5 +148,5 @@ if (Login()) {
     }
 
 }else{
-    alert("Tarjeta Retenida");
+    alert("Tarjeta Retenida/veme el lunes...");
 }
