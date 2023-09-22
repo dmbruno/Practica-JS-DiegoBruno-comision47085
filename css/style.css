@@ -1,0 +1,22 @@
+h1{
+    background-color: rgba(135, 206, 250, 0.791);
+    font-size: 3rem;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.boton{
+    align-self: center;
+}
+
+.contenedor{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+body{
+    background-color: rgb(41, 169, 249);
+}
