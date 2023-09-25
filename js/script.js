@@ -13,18 +13,18 @@ let savedPin = "1234";
 function Login() {
     let ingresar = false;
     let intentos = 3;
-    for (let i = intentos; i > 0; i--){
+    for (let i = intentos; i > 0; i--) {
         let userPin = prompt("ingresa tu pin");
         if (userPin === savedPin) {
             alert("Bienvendio/a");
             ingresar = true;
             break;
         } else {
-            alert("error, te quedan " + (i-1) + " intentos")
+            alert("error, te quedan " + (i - 1) + " intentos")
         }
     }
-    return ingresar; 
-} 
+    return ingresar;
+}
 
 
 function sumaPaquete(numeroA, numeroB) {
@@ -73,7 +73,7 @@ if (Login()) {
                         alert("Ingresaste una opcion invalida");
                     }
                 default:
-                    alert("Ingresaste una opcion invalida");
+                    break;
             }
             break;
         case "2":
@@ -103,7 +103,8 @@ if (Login()) {
                         alert("Ingresaste una opcion invalida");
                     }
                 default:
-                    alert("Ingresaste una opcion invalida");
+                    
+                    break;
             }
             break;
         case "3":
@@ -134,7 +135,7 @@ if (Login()) {
                     }
                     break;
                 default:
-                    alert("Ingresaste una opcion invalida");
+                    
                     break;
             }
             break;
@@ -145,7 +146,6 @@ if (Login()) {
             alert("ingresaste una opcion invalida");
             break;
     }
-
-}else{
+} else {
     alert("Tarjeta Retenida/veme el lunes...");
 }
