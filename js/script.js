@@ -1,5 +1,5 @@
 
-class Paquete {
+/* class Paquete {
     constructor(destino, precio, equipaje) {
         this.destino = destino;
         this.precio = precio;
@@ -7,6 +7,13 @@ class Paquete {
         this.vendido = false;
     }
 }
+
+const paquete1 = new Paquete("Brasil", 1000, 100);
+const paquete2 = new Paquete("Mexico", 1100, 150);
+const paquete3 = new Paquete("Nepal", 1150, 180);
+const paquete4 = new Paquete("Tailandia", 1200, 190);
+const paquete5 = new Paquete("NYC", 1100, 150);
+const paquete6 = new Paquete("Paris", 1100, 150);
 
 
 let savedPin = "1234";
@@ -33,12 +40,6 @@ function sumaPaquete(numeroA, numeroB) {
 }
 
 
-const paquete1 = new Paquete("Brasil", 1000, 100);
-const paquete2 = new Paquete("Mexico", 1100, 150);
-const paquete3 = new Paquete("Nepal", 1150, 180);
-const paquete4 = new Paquete("Tailandia", 1200, 190);
-const paquete5 = new Paquete("NYC", 1100, 150);
-const paquete6 = new Paquete("Paris", 1100, 150);
 
 
 
@@ -149,3 +150,71 @@ if (Login()) {
 } else {
     alert("Tarjeta Retenida/veme el lunes...");
 }
+ */
+
+
+
+const destinos = [
+    {
+        id: `Brasil`,
+        title: `Playa Brasilera`,
+        description: `Brasil es conocido por sus hermosas playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura. 
+        Desde las playas del norte de Brasil hasta las del sur.`,
+        thumbnail: `https://images.unsplash.com/photo-1473116763249-2faaef81ccda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80`,
+        price: "USD " + 900
+    },
+    {
+        id: `Mexico`,
+        title: `Rivera Maya`,
+        description: `La Riviera Maya es una hermosa región costera en México que cuenta con muchas playas impresionantes`,
+        thumbnail: `https://images.unsplash.com/photo-1616423841125-8307665a0469?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80`,
+        price: "USD " + 1000
+    },
+    {
+        id: `Nepal`,
+        title: `Montañas en Nepal`,
+        description: `Nepal es un país multicultural y multilingüe ubicado en Asia del Sur, entre India y China `,
+        thumbnail: `https://images.unsplash.com/photo-1571401835393-8c5f35328320?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80`,
+        price: "USD " + 1200
+    },
+    {
+        id: `Tailandia`,
+        title: `Montañas en Tailandia`,
+        description: `Tailandia es un país conocido por sus hermosas playas, que atraen a turistas de todo el mundo`,
+        thumbnail: `https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
+        price: "USD " + 1300
+    },
+    {
+        id: `New York`,
+        title: `NYC`,
+        description: `Nueva York es una ciudad vibrante y emocionante que atrae a turistas de todo el mundo.`,
+        thumbnail: `https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
+        price: "USD " + 1300
+    },
+    {
+        id: `Paris`,
+        title: `Paris`,
+        description: `París es una ciudad hermosa y vibrante que atrae a turistas de todo el mundo. La ciudad es conocida por su rica historia, su cultura vibrante y su arquitectura impresionante`,
+        thumbnail: `https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
+        price: "USD " + 1300
+    }
+]
+
+let contenedor = document.createElement("div");
+
+for (const destino of destinos) {
+    contenedor.innerHTML += `
+    
+    <article class = "contenedor-card">
+    <img class="contenedor-img" src= ${destino.thumbnail} alt = "imagen sobre ${destino.title}">
+    <div class="contenedor-texto">
+        <h2>${destino.title}</h2>
+        <p>${destino.description}</p>
+        <b>${destino.price}</b>
+    </div>
+    </article>
+    
+    `;
+}
+document.body.append(contenedor);
+

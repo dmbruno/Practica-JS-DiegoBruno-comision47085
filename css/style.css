@@ -1,22 +1,95 @@
-h1{
-    background-color: rgba(135, 206, 250, 0.791);
-    font-size: 3rem;
-    text-align: center;
-    font-family: sans-serif;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.boton{
-    align-self: center;
+.logo {
+    color: black;
+    padding-left: 6.25rem;
+    object-fit: cover;
 }
 
-.contenedor{
-
+.navbar {
+    padding-right: 6.25rem;
+    list-style: none;
+    width: 20rem;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-between;
+    margin-left: 15px;
 }
 
-body{
-    background-color: rgb(41, 169, 249);
+.navbar a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.contenedor-navbar {
+    height: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(31, 31, 100, 0.848);
+}
+.contenedor-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3.125rem;
+    font-size: 1.5rem;
+    padding-left: 1.25rem;
+    gap: .625rem;
+    
+}
+.box input{
+    width: 200px;
+    height: 40px;
+}
+.boton input{
+    height: 40px;
+    width: 100px;
+}
+::placeholder{
+    font-size: 1rem;
+}
+
+
+
+
+
+.contenedor-card{
+    margin: 20px;
+    width: 30%;
+    height: 450px;
+    border: .125rem solid gray;
+    
+}
+.contenedor-img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.contenedor-texto{
+    justify-content: flex-start;
+    gap: .9375rem;
+    
+}
+
+body div{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+} 
+
+.titulo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline .1875rem solid rgb(31, 25, 25);
 }
