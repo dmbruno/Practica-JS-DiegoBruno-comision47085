@@ -1,5 +1,4 @@
-
-/* class Paquete {
+class Paquete {
     constructor(destino, precio, equipaje) {
         this.destino = destino;
         this.precio = precio;
@@ -8,12 +7,13 @@
     }
 }
 
-const paquete1 = new Paquete("Brasil", 1000, 100);
-const paquete2 = new Paquete("Mexico", 1100, 150);
-const paquete3 = new Paquete("Nepal", 1150, 180);
-const paquete4 = new Paquete("Tailandia", 1200, 190);
-const paquete5 = new Paquete("NYC", 1100, 150);
-const paquete6 = new Paquete("Paris", 1100, 150);
+const paquete1 = new Paquete("Brasil", 1115.22, 125.85);
+const paquete2 = new Paquete("Mexico", 1122.35, 152.52);
+const paquete3 = new Paquete("Nepal", 1155.32, 181.25);
+const paquete4 = new Paquete("Tailandia", 1222.58, 191.45);
+const paquete5 = new Paquete("NYC", 1129.69, 155.98);
+const paquete6 = new Paquete("Paris", 1290.39, 155.99);
+
 
 
 let savedPin = "1234";
@@ -23,7 +23,6 @@ function Login() {
     for (let i = intentos; i > 0; i--) {
         let userPin = prompt("ingresa tu pin");
         if (userPin === savedPin) {
-            alert("Bienvendio/a");
             ingresar = true;
             break;
         } else {
@@ -35,7 +34,9 @@ function Login() {
 
 
 function sumaPaquete(numeroA, numeroB) {
+
     let resultado = numeroA + numeroB;
+    Math.round(resultado);
     return resultado;
 }
 
@@ -43,8 +44,9 @@ function sumaPaquete(numeroA, numeroB) {
 
 
 
-
-if (Login()) {
+ if (Login()) {
+    let fecha = new Date();
+    alert("Bienvenido la fecha de hoy es: " + fecha.toLocaleDateString());
     let opcion = prompt("ingresa una opcion : \n1 - Playa \n2 - Montaña \n3 - City \n4 - ver promos");
     switch (opcion) {
         case "1":
@@ -150,16 +152,56 @@ if (Login()) {
 } else {
     alert("Tarjeta Retenida/veme el lunes...");
 }
- */
+ 
 
 
 
-const destinos = [
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  const destinos = [
     {
         id: `Brasil`,
-        title: `Playa Brasilera`,
-        description: `Brasil es conocido por sus hermosas playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura. 
-        Desde las playas del norte de Brasil hasta las del sur.`,
+        title: `Rio De Janeiro`,
+        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura. 
+        `,
         thumbnail: `https://images.unsplash.com/photo-1473116763249-2faaef81ccda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80`,
         price: "USD " + 900
     },
@@ -206,7 +248,7 @@ for (const destino of destinos) {
     contenedor.innerHTML += `
     
     <article class = "contenedor-card">
-    <img class="contenedor-img" src= ${destino.thumbnail} alt = "imagen sobre ${destino.title}">
+        <img class="contenedor-img" src= ${destino.thumbnail} alt = "imagen sobre ${destino.title}">
     <div class="contenedor-texto">
         <h2>${destino.title}</h2>
         <p>${destino.description}</p>
@@ -216,5 +258,6 @@ for (const destino of destinos) {
     
     `;
 }
-document.body.append(contenedor);
+
+document.body.append(contenedor);  */
 

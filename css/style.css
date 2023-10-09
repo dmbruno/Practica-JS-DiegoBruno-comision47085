@@ -5,9 +5,10 @@
 }
 
 .logo {
-    color: black;
+    color: white;
+    font-size: 1.5rem;
     padding-left: 6.25rem;
-    object-fit: cover;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .navbar {
@@ -38,7 +39,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 3.125rem;
+    height: 3.125rem; 
     font-size: 1.5rem;
     padding-left: 1.25rem;
     gap: .625rem;
@@ -65,7 +66,7 @@
     width: 30%;
     height: 450px;
     border: .125rem solid gray;
-    
+    background-color: white;
 }
 .contenedor-img{
     width: 100%;
@@ -74,12 +75,15 @@
     overflow: hidden;
 }
 .contenedor-texto{
+    background-color: white;
     justify-content: flex-start;
     gap: .9375rem;
+    
     
 }
 
 body div{
+    background-color: antiquewhite;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
