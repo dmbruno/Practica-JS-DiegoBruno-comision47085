@@ -35,8 +35,8 @@ function Login() {
 
 function sumaPaquete(numeroA, numeroB) {
 
-    let resultado = numeroA + numeroB;
-    Math.round(resultado);
+    let resultado = Math.round(numeroA + numeroB);
+    
     return resultado;
 }
 
@@ -44,7 +44,7 @@ function sumaPaquete(numeroA, numeroB) {
 
 
 
- if (Login()) {
+if (Login()) {
     let fecha = new Date();
     alert("Bienvenido la fecha de hoy es: " + fecha.toLocaleDateString());
     let opcion = prompt("ingresa una opcion : \n1 - Playa \n2 - Montaña \n3 - City \n4 - ver promos");
@@ -57,9 +57,9 @@ function sumaPaquete(numeroA, numeroB) {
                     let desicion0 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
                     if (desicion0 == "1") {
                         let resultado = sumaPaquete(paquete1.precio, paquete1.equipaje);
-                        alert("El precio de tu viaje a Brasil CON equipaje es: " + parseInt(resultado));
+                        alert("El precio de tu viaje a Brasil CON equipaje es: " + resultado);
                     } else if (desicion0 == "2") {
-                        alert("El precio de tu viaje a Brasil SIN equipaje es :" + paquete1.precio);
+                        alert("El precio de tu viaje a Brasil SIN equipaje es :" + Math.round(paquete1.precio));
                     } else {
                         alert("Ingresaste una opcion invalida");
                     }
@@ -69,9 +69,9 @@ function sumaPaquete(numeroA, numeroB) {
                     let desicion2 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
                     if (desicion2 == "1") {
                         let resultado = sumaPaquete(paquete2.precio, paquete2.equipaje);
-                        alert("El precio de tu viaje a Mexico CON equipaje es: " + parseInt(resultado));
+                        alert("El precio de tu viaje a Mexico CON equipaje es: " + resultado);
                     } else if (desicion2 == "2") {
-                        alert("El precio de tu viaje a Mexico SIN equipaje es :" + paquete2.precio);
+                        alert("El precio de tu viaje a Mexico SIN equipaje es :" + Math.round(paquete2.precio));
                     } else {
                         alert("Ingresaste una opcion invalida");
                     }
@@ -87,9 +87,9 @@ function sumaPaquete(numeroA, numeroB) {
                     let desicion1 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
                     if (desicion1 == "1") {
                         let resultado = sumaPaquete(paquete3.precio, paquete3.equipaje);
-                        alert("El precio de tu viaje a Nepal CON equipaje es: " + parseInt(resultado));
+                        alert("El precio de tu viaje a Nepal CON equipaje es: " + resultado);
                     } else if (desicion1 == "2") {
-                        alert("El precio de tu viaje a Nepal SIN equipaje es :" + paquete3.precio);
+                        alert("El precio de tu viaje a Nepal SIN equipaje es :" + Math.round(paquete3.precio));
                     } else {
                         alert("Ingresaste una opcion invalida");
                     }
@@ -99,9 +99,9 @@ function sumaPaquete(numeroA, numeroB) {
                     let desicion3 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
                     if (desicion3 == "1") {
                         let resultado = sumaPaquete(paquete4.precio, paquete4.equipaje);
-                        alert("El precio de tu viaje a Tailandia CON equipaje es: " + parseInt(resultado));
+                        alert("El precio de tu viaje a Tailandia CON equipaje es: " + resultado);
                     } else if (desicion3 == "2") {
-                        alert("El precio de tu viaje a Tailandia SIN equipaje es :" + paquete4.precio);
+                        alert("El precio de tu viaje a Tailandia SIN equipaje es :" + Math.round(paquete4.precio));
                     } else {
                         alert("Ingresaste una opcion invalida");
                     }
@@ -118,9 +118,9 @@ function sumaPaquete(numeroA, numeroB) {
                     let desicion4 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
                     if (desicion4 == "1") {
                         let resultado = sumaPaquete(paquete5.precio, paquete5.equipaje);
-                        alert("El precio de tu viaje a New York CON equipaje es: " + parseInt(resultado));
+                        alert("El precio de tu viaje a New York CON equipaje es: " + resultado);
                     } else if (desicion4 == "2") {
-                        alert("El precio de tu viaje a New York SIN equipaje es :" + paquete5.precio);
+                        alert("El precio de tu viaje a New York SIN equipaje es :" + Math.round(paquete5.precio));
                     } else {
                         alert("Ingresaste una opcion invalida"); 3
                     }
@@ -130,9 +130,9 @@ function sumaPaquete(numeroA, numeroB) {
                     let desicion5 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
                     if (desicion5 == "1") {
                         let resultado = sumaPaquete(paquete6.precio, paquete6.equipaje);
-                        alert("El precio de tu viaje a Paris CON equipaje es: " + parseInt(resultado));
+                        alert("El precio de tu viaje a Paris CON equipaje es: " + resultado);
                     } else if (desicion5 == "2") {
-                        alert("El precio de tu viaje a Paris SIN equipaje es :" + paquete6.precio);
+                        alert("El precio de tu viaje a Paris SIN equipaje es :" + Math.round(paquete6.precio));
                     } else {
                         alert("Ingresaste una opcion invalida"); 3
                     }
@@ -152,7 +152,7 @@ function sumaPaquete(numeroA, numeroB) {
 } else {
     alert("Tarjeta Retenida/veme el lunes...");
 }
- 
+
 
 
 
