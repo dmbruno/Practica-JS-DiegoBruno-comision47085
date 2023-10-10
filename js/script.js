@@ -1,19 +1,65 @@
-class Paquete {
-    constructor(destino, precio, equipaje) {
-        this.destino = destino;
-        this.precio = precio;
-        this.equipaje = equipaje;
-        this.vendido = false;
+
+const destinos = [
+    {
+        id: `Brasil`,
+        title: `Rio De Janeiro`,
+        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura. 
+        `,
+        thumbnail: `https://images.unsplash.com/photo-1473116763249-2faaef81ccda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80`,
+        price: 955.32,
+        equipaje: 15.35,
+    },
+    {
+        id: `Mexico`,
+        title: `Rivera Maya`,
+        description: `La Riviera Maya es una hermosa región costera en México que cuenta con muchas playas impresionantes`,
+        thumbnail: `https://images.unsplash.com/photo-1616423841125-8307665a0469?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80`,
+        price:  1255.54,
+        equipaje: 157.65,
+    },
+    {
+        id: `Nepal`,
+        title: `Montañas en Nepal`,
+        description: `Nepal es un país multicultural y multilingüe ubicado en Asia del Sur, entre India y China `,
+        thumbnail: `https://images.unsplash.com/photo-1571401835393-8c5f35328320?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80`,
+        price: 1225.31,
+        equipaje: 152.67,
+    },
+    {
+        id: `Tailandia`,
+        title: `Montañas en Tailandia`,
+        description: `Tailandia es un país conocido por sus hermosas playas, que atraen a turistas de todo el mundo`,
+        thumbnail: `https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
+        price: 1353.55,
+        equipaje: 152.99,
+    },
+    {
+        id: `New York`,
+        title: `NYC`,
+        description: `Nueva York es una ciudad vibrante y emocionante que atrae a turistas de todo el mundo.`,
+        thumbnail: `https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
+        price: 1356.99,
+        equipaje: 169.35
+    },
+    {
+        id: `Paris`,
+        title: `Paris`,
+        description: `París es una ciudad hermosa y vibrante que atrae a turistas de todo el mundo. La ciudad es conocida por su rica historia, su cultura vibrante y su arquitectura impresionante`,
+        thumbnail: `https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
+        price: 1399.54,
+        equipaje: 178.36,
     }
-}
+]
 
-const paquete1 = new Paquete("Brasil", 1115.22, 125.85);
-const paquete2 = new Paquete("Mexico", 1122.35, 152.52);
-const paquete3 = new Paquete("Nepal", 1155.32, 181.25);
-const paquete4 = new Paquete("Tailandia", 1222.58, 191.45);
-const paquete5 = new Paquete("NYC", 1129.69, 155.98);
-const paquete6 = new Paquete("Paris", 1290.39, 155.99);
 
+
+const mostrarViajes = () => {
+    let mensaje = "\nMira los paquetes que tenemos disponibles esta semana: \n"
+    destinos.map((destino) => {
+        mensaje += `\n Destino: ${destino.title} \n Precio: ${destino.price} USD \n ----------`
+    });
+    alert(mensaje);
+};
 
 
 let savedPin = "1234";
@@ -32,14 +78,10 @@ function Login() {
     return ingresar;
 }
 
-
-function sumaPaquete(numeroA, numeroB) {
-
-    let resultado = Math.round(numeroA + numeroB);
-    
+function sumaPaquete(a, b) {
+    let resultado = Math.round(a + b);
     return resultado;
 }
-
 
 
 
@@ -47,6 +89,7 @@ function sumaPaquete(numeroA, numeroB) {
 if (Login()) {
     let fecha = new Date();
     alert("Bienvenido la fecha de hoy es: " + fecha.toLocaleDateString());
+    mostrarViajes();
     let opcion = prompt("ingresa una opcion : \n1 - Playa \n2 - Montaña \n3 - City \n4 - ver promos");
     switch (opcion) {
         case "1":
@@ -56,10 +99,10 @@ if (Login()) {
                     alert("**Elegiste ir a Brasil**");
                     let desicion0 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
                     if (desicion0 == "1") {
-                        let resultado = sumaPaquete(paquete1.precio, paquete1.equipaje);
+                        let resultado = sumaPaquete(destinos[0].price, destinos[0].equipaje);
                         alert("El precio de tu viaje a Brasil CON equipaje es: " + resultado);
                     } else if (desicion0 == "2") {
-                        alert("El precio de tu viaje a Brasil SIN equipaje es :" + Math.round(paquete1.precio));
+                        alert("El precio de tu viaje a Brasil SIN equipaje es :" + Math.round(destinos[0].price));
                     } else {
                         alert("Ingresaste una opcion invalida");
                     }
@@ -68,10 +111,10 @@ if (Login()) {
                     alert("***Elegiste ir a Mexico***");
                     let desicion2 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
                     if (desicion2 == "1") {
-                        let resultado = sumaPaquete(paquete2.precio, paquete2.equipaje);
+                        let resultado = sumaPaquete(destinos[1].price, destinos[1].equipaje);
                         alert("El precio de tu viaje a Mexico CON equipaje es: " + resultado);
                     } else if (desicion2 == "2") {
-                        alert("El precio de tu viaje a Mexico SIN equipaje es :" + Math.round(paquete2.precio));
+                        alert("El precio de tu viaje a Mexico SIN equipaje es :" + Math.round(destinos[1].price));
                     } else {
                         alert("Ingresaste una opcion invalida");
                     }
@@ -86,10 +129,10 @@ if (Login()) {
                     alert("**Elegiste ir a Nepal**");
                     let desicion1 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
                     if (desicion1 == "1") {
-                        let resultado = sumaPaquete(paquete3.precio, paquete3.equipaje);
+                        let resultado = sumaPaquete(destinos[2].price, destinos[2].equipaje);
                         alert("El precio de tu viaje a Nepal CON equipaje es: " + resultado);
                     } else if (desicion1 == "2") {
-                        alert("El precio de tu viaje a Nepal SIN equipaje es :" + Math.round(paquete3.precio));
+                        alert("El precio de tu viaje a Nepal SIN equipaje es :" + Math.round(destinos[2].price));
                     } else {
                         alert("Ingresaste una opcion invalida");
                     }
@@ -98,15 +141,15 @@ if (Login()) {
                     alert("**Elegiste ir a Tailandia**");
                     let desicion3 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
                     if (desicion3 == "1") {
-                        let resultado = sumaPaquete(paquete4.precio, paquete4.equipaje);
+                        let resultado = sumaPaquete(destinos[3].price, destinos[3].equipaje);
                         alert("El precio de tu viaje a Tailandia CON equipaje es: " + resultado);
                     } else if (desicion3 == "2") {
-                        alert("El precio de tu viaje a Tailandia SIN equipaje es :" + Math.round(paquete4.precio));
+                        alert("El precio de tu viaje a Tailandia SIN equipaje es :" + Math.round(destinos[3].price));
                     } else {
                         alert("Ingresaste una opcion invalida");
                     }
                 default:
-                    
+
                     break;
             }
             break;
@@ -117,10 +160,10 @@ if (Login()) {
                     alert("**Elegiste ir a New York**");
                     let desicion4 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
                     if (desicion4 == "1") {
-                        let resultado = sumaPaquete(paquete5.precio, paquete5.equipaje);
+                        let resultado = sumaPaquete(destinos[4].price, destinos[4].equipaje);
                         alert("El precio de tu viaje a New York CON equipaje es: " + resultado);
                     } else if (desicion4 == "2") {
-                        alert("El precio de tu viaje a New York SIN equipaje es :" + Math.round(paquete5.precio));
+                        alert("El precio de tu viaje a New York SIN equipaje es :" + Math.round(destinos[4].price));
                     } else {
                         alert("Ingresaste una opcion invalida"); 3
                     }
@@ -129,16 +172,16 @@ if (Login()) {
                     alert("**Elegiste ir a Paris**");
                     let desicion5 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
                     if (desicion5 == "1") {
-                        let resultado = sumaPaquete(paquete6.precio, paquete6.equipaje);
+                        let resultado = sumaPaquete(destinos[5].price, destinos[5].equipaje);
                         alert("El precio de tu viaje a Paris CON equipaje es: " + resultado);
                     } else if (desicion5 == "2") {
-                        alert("El precio de tu viaje a Paris SIN equipaje es :" + Math.round(paquete6.precio));
+                        alert("El precio de tu viaje a Paris SIN equipaje es :" + Math.round(destinos[5].price));
                     } else {
                         alert("Ingresaste una opcion invalida"); 3
                     }
                     break;
                 default:
-                    
+
                     break;
             }
             break;
