@@ -52,7 +52,6 @@ const destinos = [
 ]
 
 
-
 const mostrarViajes = () => {
     let mensaje = "\nMira los paquetes que tenemos disponibles esta semana: \n"
     destinos.map((destino) => {
@@ -60,7 +59,6 @@ const mostrarViajes = () => {
     });
     alert(mensaje);
 };
-
 
 let savedPin = "1234";
 function Login() {
@@ -82,8 +80,6 @@ function sumaPaquete(a, b) {
     let resultado = Math.round(a + b);
     return resultado;
 }
-
-
 
 
 if (Login()) {
@@ -149,7 +145,6 @@ if (Login()) {
                         alert("Ingresaste una opcion invalida");
                     }
                 default:
-
                     break;
             }
             break;
@@ -181,7 +176,6 @@ if (Login()) {
                     }
                     break;
                 default:
-
                     break;
             }
             break;
