@@ -187,7 +187,7 @@ if (Login()) {
             break;
     }
 } else {
-    alert("Tarjeta Retenida/veme el lunes...");
+    alert("Usuario Bloqueado, contactese con administracion...");
 }
 
 
