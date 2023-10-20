@@ -72,9 +72,15 @@
 }
 
 .contenedor-img {
+    opacity: 90%;
     width: 100%;
     object-fit: cover;
     overflow: hidden;
+}
+
+.contenedor-img:hover{
+    opacity: 100%;
+    transition-duration: 1s;
 }
 
 .contenedor-texto {
@@ -83,7 +89,12 @@
     gap: .9375rem;
     margin: 0;
     display: flex;
+}
+
+.contenedor-texto h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
+
 }
 .precio{
     font-size: 1.5rem;
@@ -167,10 +178,14 @@ body div {
 }
 
 .envio-mail{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
     width: 100%;
+    color: #ffff;
+    padding: .625rem;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 255, 0.417);
+    background-color: rgba(0, 0, 255, 0.764);
 }
 .envio-mail:hover{
     background-color: rgba(71, 163, 71, 0.75);
@@ -182,6 +197,4 @@ body div {
     justify-content: space-between;
     background-color: white;
     margin: 0;
-    
-    
 }
