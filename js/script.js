@@ -1,239 +1,6 @@
 
+
 const destinos = [
-    {
-        id: `Brasil`,
-        title: `Rio De Janeiro`,
-        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura. 
-        `,
-        thumbnail: `https://images.unsplash.com/photo-1473116763249-2faaef81ccda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80`,
-        price: 955.32,
-        equipaje: 15.35,
-    },
-    {
-        id: `Mexico`,
-        title: `Rivera Maya`,
-        description: `La Riviera Maya es una hermosa región costera en México que cuenta con muchas playas impresionantes`,
-        thumbnail: `https://images.unsplash.com/photo-1616423841125-8307665a0469?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80`,
-        price:  1255.54,
-        equipaje: 157.65,
-    },
-    {
-        id: `Nepal`,
-        title: `Montañas en Nepal`,
-        description: `Nepal es un país multicultural y multilingüe ubicado en Asia del Sur, entre India y China `,
-        thumbnail: `https://images.unsplash.com/photo-1571401835393-8c5f35328320?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80`,
-        price: 1225.31,
-        equipaje: 152.67,
-    },
-    {
-        id: `Tailandia`,
-        title: `Montañas en Tailandia`,
-        description: `Tailandia es un país conocido por sus hermosas playas, que atraen a turistas de todo el mundo`,
-        thumbnail: `https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
-        price: 1353.55,
-        equipaje: 152.99,
-    },
-    {
-        id: `New York`,
-        title: `NYC`,
-        description: `Nueva York es una ciudad vibrante y emocionante que atrae a turistas de todo el mundo.`,
-        thumbnail: `https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
-        price: 1356.99,
-        equipaje: 169.35
-    },
-    {
-        id: `Paris`,
-        title: `Paris`,
-        description: `París es una ciudad hermosa y vibrante que atrae a turistas de todo el mundo. La ciudad es conocida por su rica historia, su cultura vibrante y su arquitectura impresionante`,
-        thumbnail: `https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
-        price: 1399.54,
-        equipaje: 178.36,
-    }
-]
-
-
-const mostrarViajes = () => {
-    let mensaje = "\nMira los paquetes que tenemos disponibles esta semana: \n"
-    destinos.map((destino) => {
-        mensaje += `\n Destino: ${destino.title} \n Precio: ${destino.price} USD \n ----------`
-    });
-    alert(mensaje);
-};
-
-let savedPin = "1234";
-function Login() {
-    let ingresar = false;
-    let intentos = 3;
-    for (let i = intentos; i > 0; i--) {
-        let userPin = prompt("ingresa tu pin");
-        if (userPin === savedPin) {
-            ingresar = true;
-            break;
-        } else {
-            alert("error, te quedan " + (i - 1) + " intentos")
-        }
-    }
-    return ingresar;
-}
-
-function sumaPaquete(a, b) {
-    let resultado = Math.round(a + b);
-    return resultado;
-}
-
-
-if (Login()) {
-    let fecha = new Date();
-    alert("Bienvenido la fecha de hoy es: " + fecha.toLocaleDateString());
-    mostrarViajes();
-    let opcion = prompt("ingresa una opcion : \n1 - Playa \n2 - Montaña \n3 - City \n4 - ver promos");
-    switch (opcion) {
-        case "1":
-            let playas = (prompt("Elegi a que playa queres ir: \n1 - Brasil \n2 - Mexico"))
-            switch (playas) {
-                case "1":
-                    alert("**Elegiste ir a Brasil**");
-                    let desicion0 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
-                    if (desicion0 == "1") {
-                        let resultado = sumaPaquete(destinos[0].price, destinos[0].equipaje);
-                        alert("El precio de tu viaje a Brasil CON equipaje es: " + resultado);
-                    } else if (desicion0 == "2") {
-                        alert("El precio de tu viaje a Brasil SIN equipaje es :" + Math.round(destinos[0].price));
-                    } else {
-                        alert("Ingresaste una opcion invalida");
-                    }
-                    break;
-                case "2":
-                    alert("***Elegiste ir a Mexico***");
-                    let desicion2 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
-                    if (desicion2 == "1") {
-                        let resultado = sumaPaquete(destinos[1].price, destinos[1].equipaje);
-                        alert("El precio de tu viaje a Mexico CON equipaje es: " + resultado);
-                    } else if (desicion2 == "2") {
-                        alert("El precio de tu viaje a Mexico SIN equipaje es :" + Math.round(destinos[1].price));
-                    } else {
-                        alert("Ingresaste una opcion invalida");
-                    }
-                default:
-                    break;
-            }
-            break;
-        case "2":
-            let montaña = (prompt("Elegi a que Montaña queres ir: \n1 - Nepal \n2 - Tailandia"));
-            switch (montaña) {
-                case "1":
-                    alert("**Elegiste ir a Nepal**");
-                    let desicion1 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
-                    if (desicion1 == "1") {
-                        let resultado = sumaPaquete(destinos[2].price, destinos[2].equipaje);
-                        alert("El precio de tu viaje a Nepal CON equipaje es: " + resultado);
-                    } else if (desicion1 == "2") {
-                        alert("El precio de tu viaje a Nepal SIN equipaje es :" + Math.round(destinos[2].price));
-                    } else {
-                        alert("Ingresaste una opcion invalida");
-                    }
-                    break;
-                case "2":
-                    alert("**Elegiste ir a Tailandia**");
-                    let desicion3 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
-                    if (desicion3 == "1") {
-                        let resultado = sumaPaquete(destinos[3].price, destinos[3].equipaje);
-                        alert("El precio de tu viaje a Tailandia CON equipaje es: " + resultado);
-                    } else if (desicion3 == "2") {
-                        alert("El precio de tu viaje a Tailandia SIN equipaje es :" + Math.round(destinos[3].price));
-                    } else {
-                        alert("Ingresaste una opcion invalida");
-                    }
-                default:
-                    break;
-            }
-            break;
-        case "3":
-            let lugar = (prompt("Elegi a que Cuidad queres ir: \n1 - New York \n2 - Paris"))
-            switch (lugar) {
-                case "1":
-                    alert("**Elegiste ir a New York**");
-                    let desicion4 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
-                    if (desicion4 == "1") {
-                        let resultado = sumaPaquete(destinos[4].price, destinos[4].equipaje);
-                        alert("El precio de tu viaje a New York CON equipaje es: " + resultado);
-                    } else if (desicion4 == "2") {
-                        alert("El precio de tu viaje a New York SIN equipaje es :" + Math.round(destinos[4].price));
-                    } else {
-                        alert("Ingresaste una opcion invalida"); 3
-                    }
-                    break;
-                case "2":
-                    alert("**Elegiste ir a Paris**");
-                    let desicion5 = (prompt("\n1 - Con equipaje \n2 - Sin Equipaje"));
-                    if (desicion5 == "1") {
-                        let resultado = sumaPaquete(destinos[5].price, destinos[5].equipaje);
-                        alert("El precio de tu viaje a Paris CON equipaje es: " + resultado);
-                    } else if (desicion5 == "2") {
-                        alert("El precio de tu viaje a Paris SIN equipaje es :" + Math.round(destinos[5].price));
-                    } else {
-                        alert("Ingresaste una opcion invalida"); 3
-                    }
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case "4":
-            alert("Comunicate con nosotros a traves de nuestro correo \ xxx@turismo.com o \ haciendo clieck aca" + "\n **Quiero que se abra una pantalla para disparar un mail de consulta**");
-            break;
-        default:
-            alert("ingresaste una opcion invalida");
-            break;
-    }
-} else {
-    alert("Usuario Bloqueado, contactese con administracion...");
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*  const destinos = [
     {
         id: `Brasil`,
         title: `Rio De Janeiro`,
@@ -289,12 +56,106 @@ for (const destino of destinos) {
     <div class="contenedor-texto">
         <h2>${destino.title}</h2>
         <p>${destino.description}</p>
-        <b>${destino.price}</b>
+        <b class="precio">${destino.price}</b>
+        <div class="contenedor-botones">
+        <button type="submit" class="envio-mail" data-id=${destino.id}>Enviar Mail</button>
+        </div>
     </div>
     </article>
-    
     `;
 }
+document.body.append(contenedor);
 
-document.body.append(contenedor);  */
+
+
+
+const mails = document.querySelectorAll(".envio-mail");
+
+for (const mail of mails) {
+    mail.addEventListener("click", mandarMail);
+}
+function mandarMail() {
+    const formularioMail = document.createElement("div");
+    formularioMail.innerHTML = `
+    <div class="formulario-correo">
+    <form action="" id="form-viaje">
+        <label for="nombre" class="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Ingresa tu nombre...">
+        <label for="E-mail" class="nombre">E-mail</label>
+        <input type="text" id="e-mail" placeholder="Ingresa tu correo electronico...">
+        <label for="correo" class="nombre">Escribinos tu consulta</label>
+        <input type="text" id="correo" placeholder="Gracais por elegirnos, ingresa tu consulta y te responderemos via mail a la brevedad.">
+        <button>Enviar Consulta</button>
+    </form>
+</div>
+`
+    document.body.append(formularioMail);
+}
+
+
+
+
+
+
+
+
+
+
+const btn = document.querySelector("#boton");
+btn.addEventListener("click", saludar);
+function saludar() {
+    alert("si dale, con el usd a 1050????");
+}
+
+const input = document.querySelector("#input");
+const inputTexto = document.querySelector("#input-texto");
+input.addEventListener(`keyup`, mostrarKey);
+function mostrarKey(e) {
+    console.log(`tecla: `, e.key);
+}
+
+const boton2 = document.querySelector("#titulo");
+const contenidoOriginal = boton2.innerHTML;
+boton2.addEventListener(`click`, function () {
+    if (boton2.innerHTML == contenidoOriginal) {
+        modificandoHtml();
+    } else {
+        restaurarHtml();
+    }
+});
+
+function modificandoHtml() {
+    boton2.innerHTML = `En UBM, La mejor Agencia de viajes...`
+}
+function restaurarHtml() {
+    boton2.innerHTML = contenidoOriginal;
+}
+
+
+const iniciar = document.querySelector("#sesion");
+iniciar.addEventListener(`click`, inicioSesion);
+function inicioSesion() {
+    alert(iniciar.innerHTML = `formulario para usuario y contraseña`);
+}
+
+const cuenta = document.querySelector("#cuenta");
+cuenta.addEventListener("click", pedirDatos);
+function pedirDatos() {
+    alert(pedirDatos.innerHTML = "formulario para ingresar datos");
+}
+
+const input2 = document.querySelector(`#input`);
+const inputexto = document.querySelector(`#parrafo-vacio`);
+input2.addEventListener(`input`, agregandoTexto);
+function agregandoTexto() {
+    inputexto.innerHTML = input.value;
+}
+
+
+
+
+
+
+
+
 

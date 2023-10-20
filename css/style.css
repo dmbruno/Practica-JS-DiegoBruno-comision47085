@@ -34,55 +34,65 @@
     justify-content: space-between;
     background-color: rgba(31, 31, 100, 0.848);
 }
-.contenedor-body{
+
+.contenedor-body {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 3.125rem; 
+    height: 3.125rem;
     font-size: 1.5rem;
     padding-left: 1.25rem;
     gap: .625rem;
-    
+
 }
-.box input{
+
+.box input {
     width: 200px;
     height: 40px;
 }
-.boton input{
+
+#boton input {
     height: 40px;
     width: 100px;
 }
-::placeholder{
+
+::placeholder {
     font-size: 1rem;
 }
 
 
 
-
-
-.contenedor-card{
+.contenedor-card {
     margin: 20px;
     width: 30%;
-    height: 450px;
+    height: max-content;
     border: .125rem solid gray;
     background-color: white;
 }
-.contenedor-img{
+
+.contenedor-img {
     width: 100%;
-    height: 250px;
     object-fit: cover;
     overflow: hidden;
 }
-.contenedor-texto{
+
+.contenedor-texto {
     background-color: white;
     justify-content: flex-start;
     gap: .9375rem;
-    
+    margin: 0;
+    display: flex;
     
 }
+.precio{
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
 
-body div{
+body div {
     background-color: antiquewhite;
     display: flex;
     flex-wrap: wrap;
@@ -90,10 +100,88 @@ body div{
     padding: 20px;
     align-items: center;
     justify-content: space-around;
-    gap: 10px;
-} 
+    
+}
 
-.titulo{
+
+.titulo1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo1 h1 {
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: underline .1875rem solid rgb(31, 25, 25);
+}
+
+#parrafo-vacio {
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2rem;
+    color: rgb(60, 60, 222);
+}
+
+.formulario-correo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+}
+
+#form-viaje {
+    border: .0625rem black solid;
+    padding: .625rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    background-color: rgb(99, 99, 128);
+    border-radius: .625rem;
+}
+
+#nombre {
+    height: 25px;
+    width: 100%;
+    
+    
+}
+
+#e-mail {
+    height: 25px;
+    width: 100%;
+    
+}
+
+#correo {
+    height: 150px;
+    width: 100%;
+    
+}
+
+.nombre{
+    color: white;
+}
+
+.envio-mail{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 255, 0.417);
+}
+.envio-mail:hover{
+    background-color: rgba(71, 163, 71, 0.75);
+}
+
+
+.contenedor-botones{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin: 0;
+    
+    
 }
