@@ -72,7 +72,7 @@
 }
 
 .contenedor-img {
-    opacity: 90%;
+    opacity: 80%;
     width: 100%;
     object-fit: cover;
     overflow: hidden;
@@ -96,12 +96,19 @@
     
 
 }
+
+
 .precio{
-    font-size: 1.5rem;
-    margin-left: auto;
+    font-size: 2rem;
     margin-right: auto;
-    margin-top: 15px;
+    font-weight: lighter;
+    margin-top: .625rem;
+} 
+.precioM{
+    margin-left: auto;
+    
 }
+
 
 body div {
     background-color: antiquewhite;
@@ -126,21 +133,12 @@ body div {
     text-decoration: underline .1875rem solid rgb(31, 25, 25);
 }
 
-#parrafo-vacio {
-    text-align: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 2rem;
-    color: rgb(60, 60, 222);
-}
+
 
 .formulario-correo{
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
-    
 }
 
 #form-viaje {
@@ -148,19 +146,35 @@ body div {
     padding: .625rem;
     display: flex;
     flex-direction: column;
-    gap: 10px;
     width: 90%;
     background-color: rgb(99, 99, 128);
     border-radius: .625rem;
+    gap: 3px;
 }
 
 #nombre {
     height: 25px;
-    width: 100%;
-    
+    width: 100%
     
 }
 
+.nombre{
+    height: 25px;
+    color: white;
+    
+
+}
+.desde{
+    height: 25px;
+    width: 100%;
+    
+}
+
+.hasta{
+    height: 25px;
+    width: 100%;
+    
+}
 #e-mail {
     height: 25px;
     width: 100%;
@@ -168,14 +182,12 @@ body div {
 }
 
 #correo {
-    height: 150px;
+    height: 100px;
     width: 100%;
     
 }
 
-.nombre{
-    color: white;
-}
+
 
 .envio-mail{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -197,4 +209,18 @@ body div {
     justify-content: space-between;
     background-color: white;
     margin: 0;
+}
+
+
+#number{
+    width: max-content;
+    height: max-content;
+}
+
+.botonMail{
+    margin-top: .9375rem;
+    height: 25px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
