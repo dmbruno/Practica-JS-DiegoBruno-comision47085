@@ -91,6 +91,8 @@ function mandarMail() {
     <form action="" id="form-viaje">
         <label for="nombre" class="nombre">Nombre</label>
         <input type="text" id="nombre" placeholder="Ingresa tu nombre...">
+        <label for="apellido" class="nombre">Apellido</label>
+        <input type="text" id="apellido" placeholder="Ingresa tu apellido...">
         <label for="E-mail" class="nombre">E-mail</label>
         <input type="text" id="e-mail" placeholder="Ingresa tu correo electronico...">
         <label for="correo" class="nombre">Escribinos tu consulta</label>
