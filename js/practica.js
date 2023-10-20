@@ -106,18 +106,18 @@ console.log(nombres2); */
 
 //de esta manera "copiamos" el array original y lo metemos dentro de una copia, y es esa copia la que debemos gestionar
 
-const userData = [{username: "admin", mail: "mail@gmail.com"}];
-const profilePic = [{thumbnail: "direcion de foto de perfil "}];
+/* const userData = [{username: "admin", mail: "mail@gmail.com"}];
+const profilePic = [{thumbnail: "direcion de foto de perfil "}]; */
 /* console.log(userData);
 console.log(profilePic); */
-const [{mail}]= userData;
+/* const [{mail}]= userData;
 
-const usuario = [mail, ...profilePic]; //de esta manera no solo copiamos, sino que agrupamos toda la info en un nuevo
+const usuario = [mail, ...profilePic]; */ //de esta manera no solo copiamos, sino que agrupamos toda la info en un nuevo
 //array
 /* de esta manera saco las propiedades de los arrays oroginales y los meto y construyo el array que yo necesito
 para de esa manera me quede mas comodo para trabajarlo */
 
-console.log(usuario);
+/* console.log(usuario); */
 
 
 // local storage, guarda los datos en la local storage, queda guardado en esa computadora

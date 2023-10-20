@@ -1,5 +1,13 @@
+/* EL OBJETIVO DEL PROYECTO ES "LEVANTAR" LA INFO DE UN PROVEEDOR DE LA AGENCIA DE MI MUJER
+PARA DE ESTA MANERA TRANSFORMAR TODA ESA INFO EN CARDS (ESTILADAS CON LA TIPOGRAFIA DE LA AGENCIA) Y PODER PROMOCIONAR
+POR LAS DISTINTAS REDES, ES DECIR QUE AL VER LAS CARDS, SI EL PASAJERO ESTA INTERESADO LO QUE HACE ES
+ENVIAR UN CORREO CON SUS DATOS Y SU CONSULTA, DE ESTA MANERA PODEMOS CONFECCIONAR BASE DE DATOS DE CLIENTES DE LA AGENCIA
+Y ADEMAS ORGANIZAR LOS PRESUPUESTOS POR DESTINOS ETC ETC */
 
 
+
+
+//array de destinos , QUE DEBERIA SER LA INFO A SUSTRAER DE LA PAGINA DEL PROVEEDOR 
 const destinos = [
     {
         id: `Brasil`,
@@ -46,11 +54,11 @@ const destinos = [
     }
 ]
 
-let contenedor = document.createElement("div");
 
+//aca cremaos e insertamos por js una card con la info de los diferentes destinos
+let contenedor = document.createElement("div");
 for (const destino of destinos) {
     contenedor.innerHTML += `
-    
     <article class = "contenedor-card">
         <img class="contenedor-img" src= ${destino.thumbnail} alt = "imagen sobre ${destino.title}">
     <div class="contenedor-texto">
@@ -68,9 +76,11 @@ document.body.append(contenedor);
 
 
 
+/* Aca selecciono todos los botones porque quiero que por medio de ellos se envie un correo de consulta 
+a las oficinas de la agencia */
+
 
 const mails = document.querySelectorAll(".envio-mail");
-
 for (const mail of mails) {
     mail.addEventListener("click", mandarMail);
 }
@@ -92,15 +102,7 @@ function mandarMail() {
     document.body.append(formularioMail);
 }
 
-
-
-
-
-
-
-
-
-
+//ESTAS SON FUNCIONES QUE TENGO EN PROCESO DE CONSTRUCCION, PERO ESTAN FUNCIONANDO CON INFO FALSA - DESESTIMAR
 const btn = document.querySelector("#boton");
 btn.addEventListener("click", saludar);
 function saludar() {
