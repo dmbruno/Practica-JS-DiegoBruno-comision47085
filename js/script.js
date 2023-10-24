@@ -174,8 +174,11 @@ function login() {
             return;
         }
     }
-    alert('usuario o contraseña invalidos')
+    alert('usuario o contraseña invalidos');
 }
+
+
+
 
 
 
