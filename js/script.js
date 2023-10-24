@@ -6,6 +6,42 @@ Y ADEMAS ORGANIZAR LOS PRESUPUESTOS POR DESTINOS ETC ETC */
 
 
 
+const iniciar = document.getElementById('inicio-sesion');
+iniciar.addEventListener('click', inicioSesion);
+
+function inicioSesion() {
+    const inicioSesion = document.createElement("div");
+    inicioSesion.innerHTML =
+        `
+        <section class="conteiner-sesion">
+            <label for="nombre" id="usuario">Usuario</label>
+            <input type="text" id="nombreUsuario" placeholder="Ingresa tu Usuario...">
+            <label for="nombre" id="usuario">Contraseña</label>
+            <input type="password" id="contraseñaUsuario" placeholder="Ingresa tu Contraseña...">
+            <button type="submit" id="btnIngresar">Ingresar</button>
+        </section>
+        `
+    document.body.append(inicioSesion);
+    const ingresar = document.querySelector('#btnIngresar');
+    ingresar.addEventListener('click', login);
+
+}
+const usuarios = [{
+    id: 'florencia',
+    password: 1234,
+},
+{
+    id: 'paz',
+    password: 1234,
+},
+{
+    id: 'zorra',
+    password: 1234,
+},
+{
+    id: 'lucia',
+    password: 1234,
+}];
 
 //array de destinos , QUE DEBERIA SER LA INFO A SUSTRAER DE LA PAGINA DEL PROVEEDOR 
 const destinos = [
@@ -29,21 +65,21 @@ const destinos = [
         title: `Montañas en Nepal`,
         description: `Nepal es un país multicultural y multilingüe ubicado en Asia del Sur, entre India y China `,
         thumbnail: `https://images.unsplash.com/photo-1571401835393-8c5f35328320?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80`,
-        price:  1200
+        price: 1200
     },
     {
         id: `Tailandia`,
         title: `Montañas en Tailandia`,
         description: `Tailandia es un país conocido por sus hermosas playas, que atraen a turistas de todo el mundo`,
         thumbnail: `https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
-        price:  1300
+        price: 1300
     },
     {
         id: `New York`,
         title: `NYC`,
         description: `Nueva York es una ciudad vibrante y emocionante que atrae a turistas de todo el mundo.`,
         thumbnail: `https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
-        price:  1300
+        price: 1300
     },
     {
         id: `Paris`,
@@ -52,68 +88,91 @@ const destinos = [
         thumbnail: `https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
         price: 1300
     }
-]
+];
+
+localStorage.setItem('usuarios', JSON.stringify(usuarios));//mando a guardar en local el array de datos con usuarios y demas
+
+sessionStorage.setItem('destinos', JSON.stringify(destinos));//aca mando solo a la sesion, para que siempre levante la info mas actualizada
 
 
 
+function login() {
 
-//aca cremaos e insertamos por js una card con la info de los diferentes destinos
-let contenedor = document.createElement("div");
-for (const destino of destinos) {
-    contenedor.innerHTML += `
-    <article class = "contenedor-card">
-        <img class="contenedor-img" src= ${destino.thumbnail} alt = "imagen sobre ${destino.title}">
-        
-    <div class="contenedor-texto">
-        <h2>${destino.title}</h2>
-        <p>${destino.description}</p>
-        <p class="precioM">USD</p>
-        <b class="precio">${destino.price}</b>
-        <div class="contenedor-botones">
-        <button type="submit" class="envio-mail" data-id=${destino.id}>Enviar Mail</button>
-        </div>
-    </div>
-    </article>
+    const nombreUsuario = document.getElementById('nombreUsuario').value;
+    const contraseñaUsuario = parseInt(document.getElementById('contraseñaUsuario').value);
+
+    for (const usuario of usuarios) {
+        if (usuario.id === nombreUsuario && usuario.password === contraseñaUsuario) {
+
+            //
+            let contenedor = document.createElement("div");
+            for (const destino of destinos) {
+                contenedor.innerHTML += `
+                            <article class = "contenedor-card">
+                                <img class="contenedor-img" src= ${destino.thumbnail} alt = "imagen sobre ${destino.title}">
+                                <div class="contenedor-texto">
+                                    <h2>${destino.title}</h2>
+                                    <p>${destino.description}</p>
+                                    <p class="precioM">USD</p>
+                                    <b class="precio">${destino.price}</b>
+                                        <div class="contenedor-botones">
+                                            <button type="submit" class="envio-mail" data-id=${destino.id}>Enviar Mail</button>
+                                        </div>
+                                </div>
+                            </article>
     `;
-}
+            }
 
-document.body.append(contenedor);
+            document.body.append(contenedor);
+            const mails = document.querySelectorAll(".envio-mail");
+            //ACA DEBERIA "APAGAR" EL FORMULARO DE INICIO DE SESION
+            for (const mail of mails) {
+                mail.addEventListener("click", mandarMail);
+            }
 
-
-
-/* Aca selecciono todos los botones porque quiero que por medio de ellos se envie un correo de consulta 
-a las oficinas de la agencia */
-
-
-const mails = document.querySelectorAll(".envio-mail");
-for (const mail of mails) {
-    mail.addEventListener("click", mandarMail);
-}
-function mandarMail() {
-    const formularioMail = document.createElement("div");
-    formularioMail.innerHTML = `
-    <div class="formulario-correo">
-    <form action="" id="form-viaje">
-        <label for="nombre" class="nombre">Nombre</label>
-        <input type="text" id="nombre" placeholder="Ingresa tu nombre..." required>
-        <label for="apellido" class="nombre">Apellido</label>
-        <input type="text" id="apellido" placeholder="Ingresa tu apellido..." required>
-        <label for="cantidad" class="nombre">Cantidad de pasajeros</label>
-        <input type="number" id="number" placeholder="Ingrese un numero" required>
-        <label for="desde" class="nombre">Salida</label>
-        <input type="date" id="nombre" required>
-        <label for="hasta" class="nombre">Regreso</label>
-        <input type="date" id="nombre" required>
-        <label for="E-mail" class="nombre">E-mail</label>
-        <input type="text" id="e-mail" placeholder="Ingresa tu correo electronico..." required>
-        <label for="correo" class="nombre">Mandanos aca tus dudas...</label>
-        <input type="text" id="correo" placeholder="Gracais por elegirnos, ingresa tu consulta y te responderemos via mail a la brevedad." required>
-        <button class="botonMail">Enviar Consulta</button>
-    </form>
-</div>
+            function mandarMail() {
+                const formularioMail = document.createElement("div");
+                formularioMail.innerHTML = `
+                    <div class="formulario-correo">
+                        <form action="" id="form-viaje">
+                            <label for="nombre" class="nombre">Nombre</label>
+                            <input type="text" id="nombre" placeholder="Ingresa tu nombre..." required>
+                            <label for="apellido" class="nombre">Apellido</label>
+                            <input type="text" id="apellido" placeholder="Ingresa tu apellido..." required>
+                            <label for="cantidad" class="nombre">Cantidad de pasajeros</label>
+                            <input type="number" id="number" placeholder="Ingrese un numero" required>
+                            <label for="desde" class="nombre">Salida</label>
+                            <input type="date" id="nombre" required>
+                            <label for="hasta" class="nombre">Regreso</label>
+                            <input type="date" id="nombre" required>
+                            <label for="E-mail" class="nombre">E-mail</label>
+                            <input type="text" id="e-mail" placeholder="Ingresa tu correo electronico..." required>
+                            <label for="correo" class="nombre">Mandanos aca tus dudas...</label>
+                            <input type="text" id="correo" placeholder="Gracais por elegirnos, ingresa tu consulta y te responderemos via mail a la brevedad." required>
+                            <button class="botonMail">Enviar Consulta</button>
+                        </form>
+                    </div>
 `
-    document.body.append(formularioMail);
+                document.body.append(formularioMail);
+            }
+            return;
+        }
+    }
+    alert('usuario o contraseña invalidos')
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //ESTAS SON FUNCIONES QUE TENGO EN PROCESO DE CONSTRUCCION, PERO ESTAN FUNCIONANDO CON INFO FALSA - DESESTIMAR
 const btn = document.querySelector("#boton");
@@ -147,17 +206,6 @@ function restaurarHtml() {
 }
 
 
-const iniciar = document.querySelector("#sesion");
-iniciar.addEventListener(`click`, inicioSesion);
-function inicioSesion() {
-    alert(iniciar.innerHTML = `formulario para usuario y contraseña`);
-}
-
-const cuenta = document.querySelector("#cuenta");
-cuenta.addEventListener("click", pedirDatos);
-function pedirDatos() {
-    alert(pedirDatos.innerHTML = "formulario para ingresar datos");
-}
 
 const input2 = document.querySelector(`#input`);
 const inputexto = document.querySelector(`#parrafo-vacio`);
@@ -165,12 +213,3 @@ input2.addEventListener(`input`, agregandoTexto);
 function agregandoTexto() {
     inputexto.innerHTML = input.value;
 }
-
-
-
-
-
-
-
-
-

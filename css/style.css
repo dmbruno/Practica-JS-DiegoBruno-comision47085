@@ -224,3 +224,70 @@ body div {
     margin-left: auto;
     margin-right: auto;
 }
+
+#usuario{
+    display: flex;
+    flex-direction: column;   
+    max-width: max-content;
+    max-height: max-content;
+    font-size: 15px;
+    
+}
+
+.conteiner-sesion{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(208, 208, 245);
+    width: max-content;
+    border: .125rem solid black;
+    padding: .9375rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#btnIngresar{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    padding: 5px;
+    margin-top: .625rem;
+    background-color: rgba(61, 61, 240, 0.518);
+}
+
+#inicio-sesion{
+    padding: 7px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(187, 180, 180);
+
+}
+#inicio-sesion:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px rgba(220, 210, 210, 0.76)
+}
+
+#contraseñaUsuario{
+    height: 25px;
+    width: 300px;
+    padding: .3125rem;
+    
+}
+
+#nombreUsuario{
+    
+    width: 300px;
+    height: 25px;
+    padding: .3125rem;
+}
+#usuario{
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: rgb(6, 34, 147);
+}
+
+#btnIngresar:hover{
+    background-color: rgba(204, 246, 204, 0.714);
+    box-shadow: .3125rem;
+    transition: 300ms;
+    cursor: pointer;
+}
