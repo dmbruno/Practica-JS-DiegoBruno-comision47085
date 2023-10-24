@@ -19,6 +19,11 @@ const usuarios = [{
     id: 'admin',
     password: 1234,
     
+},
+{
+    id: 'Lucia',
+    password: 1234,
+
 }];
 
 //array de destinos , QUE DEBERIA SER LA INFO A SUSTRAER DE LA PAGINA DEL PROVEEDOR 
@@ -83,9 +88,9 @@ function inicioSesion() {
         `
         <section class="conteiner-sesion">
             <label for="nombre" id="usuario">Usuario</label>
-            <input type="text" id="nombreUsuario" placeholder="Ingresa tu Usuario...">
+            <input type="text" id="nombreUsuario" placeholder="Ingresa tu Usuario..." required>
             <label for="nombre" id="usuario">Contraseña</label>
-            <input type="password" id="contraseñaUsuario" placeholder="Ingresa tu Contraseña...">
+            <input type="password" id="contraseñaUsuario" placeholder="Ingresa tu Contraseña..." required>
             <button type="submit" id="btnIngresar">Ingresar</button>
         </section>
         `
@@ -160,7 +165,7 @@ function login() {
                             <button class="botonMail">Enviar Consulta</button>
                         </form>
                     </div>
-`
+                            `
                 document.body.append(formularioMail);
             }
             
