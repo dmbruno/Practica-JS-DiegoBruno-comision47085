@@ -3,44 +3,22 @@ PARA DE ESTA MANERA TRANSFORMAR TODA ESA INFO EN CARDS (ESTILADAS CON LA TIPOGRA
 POR LAS DISTINTAS REDES, ES DECIR QUE AL VER LAS CARDS, SI EL PASAJERO ESTA INTERESADO LO QUE HACE ES
 ENVIAR UN CORREO CON SUS DATOS Y SU CONSULTA, DE ESTA MANERA PODEMOS CONFECCIONAR BASE DE DATOS DE CLIENTES DE LA AGENCIA
 Y ADEMAS ORGANIZAR LOS PRESUPUESTOS POR DESTINOS ETC ETC */
-
-
-
-const iniciar = document.getElementById('inicio-sesion');
-iniciar.addEventListener('click', inicioSesion);
-
-function inicioSesion() {
-    const inicioSesion = document.createElement("div");
-    inicioSesion.innerHTML =
-        `
-        <section class="conteiner-sesion">
-            <label for="nombre" id="usuario">Usuario</label>
-            <input type="text" id="nombreUsuario" placeholder="Ingresa tu Usuario...">
-            <label for="nombre" id="usuario">Contraseña</label>
-            <input type="password" id="contraseñaUsuario" placeholder="Ingresa tu Contraseña...">
-            <button type="submit" id="btnIngresar">Ingresar</button>
-        </section>
-        `
-    document.body.append(inicioSesion);
-    const ingresar = document.querySelector('#btnIngresar');
-    ingresar.addEventListener('click', login);
-
-}
 const usuarios = [{
-    id: 'florencia',
+    id: 'Florencia',
     password: 1234,
 },
 {
-    id: 'paz',
+    id: 'Paz',
     password: 1234,
 },
 {
-    id: 'zorra',
+    id: 'Agustina',
     password: 1234,
 },
 {
-    id: 'lucia',
+    id: 'admin',
     password: 1234,
+    
 }];
 
 //array de destinos , QUE DEBERIA SER LA INFO A SUSTRAER DE LA PAGINA DEL PROVEEDOR 
@@ -90,11 +68,32 @@ const destinos = [
     }
 ];
 
-localStorage.setItem('usuarios', JSON.stringify(usuarios));//mando a guardar en local el array de datos con usuarios y demas
+localStorage.setItem('usuarios', JSON.stringify(usuarios));//mando a guardar en local el array de datos con usuarios
 
 sessionStorage.setItem('destinos', JSON.stringify(destinos));//aca mando solo a la sesion, para que siempre levante la info mas actualizada
 
 
+
+const iniciar = document.getElementById('inicio-sesion');
+iniciar.addEventListener('click', inicioSesion);
+
+function inicioSesion() {
+    const inicioSesion = document.createElement("div");
+    inicioSesion.innerHTML =
+        `
+        <section class="conteiner-sesion">
+            <label for="nombre" id="usuario">Usuario</label>
+            <input type="text" id="nombreUsuario" placeholder="Ingresa tu Usuario...">
+            <label for="nombre" id="usuario">Contraseña</label>
+            <input type="password" id="contraseñaUsuario" placeholder="Ingresa tu Contraseña...">
+            <button type="submit" id="btnIngresar">Ingresar</button>
+        </section>
+        `
+    document.body.append(inicioSesion);
+    const ingresar = document.querySelector('#btnIngresar');
+    ingresar.addEventListener('click', login);
+
+}
 
 function login() {
 
@@ -104,10 +103,16 @@ function login() {
     for (const usuario of usuarios) {
         if (usuario.id === nombreUsuario && usuario.password === contraseñaUsuario) {
 
-            //
+            let saludos = document.createElement("div");
+            saludos.innerHTML =
+                `
+                    <h2 class='saludo'>Bienvenido/a ${usuario.id}</h2>
+                `;
+
             let contenedor = document.createElement("div");
             for (const destino of destinos) {
                 contenedor.innerHTML += `
+
                             <article class = "contenedor-card">
                                 <img class="contenedor-img" src= ${destino.thumbnail} alt = "imagen sobre ${destino.title}">
                                 <div class="contenedor-texto">
@@ -119,13 +124,16 @@ function login() {
                                             <button type="submit" class="envio-mail" data-id=${destino.id}>Enviar Mail</button>
                                         </div>
                                 </div>
+                                
                             </article>
     `;
-            }
 
+            }
+            document.body.append(saludos);
             document.body.append(contenedor);
+
             const mails = document.querySelectorAll(".envio-mail");
-            //ACA DEBERIA "APAGAR" EL FORMULARO DE INICIO DE SESION
+
             for (const mail of mails) {
                 mail.addEventListener("click", mandarMail);
             }
@@ -155,11 +163,30 @@ function login() {
 `
                 document.body.append(formularioMail);
             }
+            
+            document.querySelector('.conteiner-sesion').remove();
+            
             return;
         }
     }
     alert('usuario o contraseña invalidos')
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -204,8 +231,6 @@ function modificandoHtml() {
 function restaurarHtml() {
     boton2.innerHTML = contenidoOriginal;
 }
-
-
 
 const input2 = document.querySelector(`#input`);
 const inputexto = document.querySelector(`#parrafo-vacio`);
