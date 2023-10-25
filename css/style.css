@@ -90,11 +90,15 @@
     justify-content: flex-start;
     gap: .9375rem;
     margin: 0;
-    display: flex;
+    
 }
+
+
+
 
 .contenedor-texto h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 
 
 }
@@ -287,7 +291,6 @@ body div {
 }
 
 #usuario {
-
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
     color: rgb(6, 34, 147);
@@ -306,4 +309,13 @@ body div {
     font-weight: bold;
     font-style: italic;
     color: rgb(96, 147, 243);
+}
+
+.cartel{
+    width: max-content;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3125rem;
 }

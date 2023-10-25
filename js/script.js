@@ -121,7 +121,7 @@ function login() {
                             <article class = "contenedor-card">
                                 <img class="contenedor-img" src= ${destino.thumbnail} alt = "imagen sobre ${destino.title}">
                                 <div class="contenedor-texto">
-                                    <h2>${destino.title}</h2>
+                                    <h2>${destino.title}</h2>                                 
                                     <p>${destino.description}</p>
                                     <p class="precioM">USD</p>
                                     <b class="precio">${destino.price}</b>
@@ -129,7 +129,6 @@ function login() {
                                             <button type="submit" class="envio-mail" data-id=${destino.id}>Enviar Mail</button>
                                         </div>
                                 </div>
-                                
                             </article>
     `;
 
@@ -174,8 +173,19 @@ function login() {
             return;
         }
     }
-    alert('usuario o contraseña invalidos');
+ 
+
+Toastify({
+    text: "Contraseña Invalida",
+    duration: 3000,
+    gravity: "top",
+    stopOnFocus: true,
+    close: true,
+    className: "cartel",
+    }).showToast();
 }
+
+
 
 
 
