@@ -45,14 +45,14 @@ const destinos = [
     },
     {
         id: `Nepal`,
-        title: `Montañas en Nepal`,
+        title: `Nepal`,
         description: `Nepal es un país multicultural y multilingüe ubicado en Asia del Sur, entre India y China `,
         thumbnail: `https://images.unsplash.com/photo-1571401835393-8c5f35328320?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80`,
         price: 1200
     },
     {
         id: `Tailandia`,
-        title: `Montañas en Tailandia`,
+        title: `Tailandia`,
         description: `Tailandia es un país conocido por sus hermosas playas, que atraen a turistas de todo el mundo`,
         thumbnail: `https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
         price: 1300
@@ -223,7 +223,15 @@ Toastify({
 const btn = document.querySelector("#boton");
 btn.addEventListener("click", saludar);
 function saludar() {
-    alert("si dale, con el usd a 1050????");
+    Toastify({
+        text: "Estas Seguro con el USD en 1050?",
+        duration: 3000,
+        gravity: "top",
+        stopOnFocus: true,
+        close: true,
+        className: "cartel",
+        }).showToast();
+
 }
 
 const input = document.querySelector("#input");

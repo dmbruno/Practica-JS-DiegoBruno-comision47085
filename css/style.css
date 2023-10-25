@@ -69,6 +69,7 @@
     height: max-content;
     border: .125rem solid gray;
     background-color: white;
+    padding: .625rem;
 }
 
 
@@ -98,9 +99,6 @@
 
 .contenedor-texto h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-
-
 }
 
 
