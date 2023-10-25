@@ -3,6 +3,7 @@ PARA DE ESTA MANERA TRANSFORMAR TODA ESA INFO EN CARDS (ESTILADAS CON LA TIPOGRA
 POR LAS DISTINTAS REDES, ES DECIR QUE AL VER LAS CARDS, SI EL PASAJERO ESTA INTERESADO LO QUE HACE ES
 ENVIAR UN CORREO CON SUS DATOS Y SU CONSULTA, DE ESTA MANERA PODEMOS CONFECCIONAR BASE DE DATOS DE CLIENTES DE LA AGENCIA
 Y ADEMAS ORGANIZAR LOS PRESUPUESTOS POR DESTINOS ETC ETC */
+
 const usuarios = [{
     id: 'Florencia',
     password: 1234,
@@ -101,7 +102,6 @@ function inicioSesion() {
 }
 
 function login() {
-
     const nombreUsuario = document.getElementById('nombreUsuario').value;
     const contraseñaUsuario = parseInt(document.getElementById('contraseñaUsuario').value);
 
@@ -131,18 +131,15 @@ function login() {
                                 </div>
                             </article>
     `;
-
             }
             document.body.append(saludos);
             document.body.append(contenedor);
-
             const mails = document.querySelectorAll(".envio-mail");
-
             for (const mail of mails) {
                 mail.addEventListener("click", mandarMail);
             }
-
             function mandarMail() {
+                
                 const formularioMail = document.createElement("div");
                 formularioMail.innerHTML = `
                     <div class="formulario-correo">
@@ -167,9 +164,7 @@ function login() {
                             `
                 document.body.append(formularioMail);
             }
-            
-            document.querySelector('.conteiner-sesion').remove();
-            
+            document.querySelector('.conteiner-sesion').remove(); 
             return;
         }
     }
@@ -184,8 +179,6 @@ Toastify({
     className: "cartel",
     }).showToast();
 }
-
-
 
 
 

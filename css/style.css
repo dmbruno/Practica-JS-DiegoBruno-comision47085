@@ -4,12 +4,7 @@
     box-sizing: border-box;
 }
 
-.logo {
-    color: white;
-    font-size: 1.5rem;
-    padding-left: 6.25rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+
 
 .navbar {
     padding-right: 6.25rem;
@@ -32,7 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(31, 31, 100, 0.848);
+    background-color: rgba(0, 0, 0, 0.954);
 }
 
 .contenedor-body {
@@ -61,8 +56,6 @@
     font-size: 1rem;
 }
 
-
-
 .contenedor-card {
     margin: 20px;
     width: 30%;
@@ -71,8 +64,6 @@
     background-color: white;
     padding: .625rem;
 }
-
-
 
 .contenedor-img {
     opacity: 80%;
@@ -94,13 +85,9 @@
     
 }
 
-
-
-
 .contenedor-texto h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 .precio {
     font-size: 2rem;
@@ -113,7 +100,6 @@
     margin-left: auto;
 
 }
-
 
 body div {
     background-color: antiquewhite;
@@ -138,8 +124,6 @@ body div {
     text-decoration: underline .1875rem solid rgb(31, 25, 25);
 }
 
-
-
 .formulario-correo {
     display: flex;
     align-items: center;
@@ -161,12 +145,9 @@ body div {
     height: 25px;
     width: 100%
 }
-
 .nombre {
     height: 25px;
     color: white;
-
-
 }
 
 .desde {
@@ -270,7 +251,7 @@ body div {
 
 #inicio-sesion:hover {
     cursor: pointer;
-    box-shadow: 2px 2px rgba(220, 210, 210, 0.76);
+    box-shadow: 2px 2px 5px rgba(220, 210, 210, 0.76);
     transition: 300ms;
 }
 
@@ -317,3 +298,4 @@ body div {
     align-items: center;
     gap: .3125rem;
 }
+
