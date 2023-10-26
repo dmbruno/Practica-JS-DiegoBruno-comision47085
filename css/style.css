@@ -59,27 +59,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-body div {
-    background-color: antiquewhite;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 20px;
-    align-items: center;
-    justify-content: space-around;
-
-}
-
-
 .titulo1 {
     display: flex;
     flex-direction: column;
@@ -239,6 +218,16 @@ body div {
 
 
 
+body div {
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: .9375rem;
+
+}
 
 .contenedor-info{
     background-color: white;
@@ -253,54 +242,59 @@ body div {
 #contenedor-card{
     background-color: white;
     margin-left: 1.25rem;
-    margin-top: 1.25rem;
+    margin-top: 1.25rem; 
     border: 2px solid gray;
-    width: 22.75rem;
-    height: 42.5rem;
+    width: 18.75rem;
     box-shadow: 3px 3px 5px gray;
 }
 
 #imagen{
     display: flex;
     overflow: hidden;
-    width: 100%;
     opacity: 80%;
     }
+
 
 #imagen:hover{
         opacity: 100%;
         transition-duration: 1000ms;
-
     }
 
 .paquete{
     display: flex;
     align-self: flex-start;
     color: gray;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: .9375rem;
+    font-style: italic;
+    margin-left: .1875rem;
     
 }
 
 .titulo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
     align-self: flex-start;
-    
     margin-top: 5px;
     font-size: 1.5rem;
     font-weight: bold;
-
+    padding-left: .3125rem;
 }
 
 .subtitulo{
     display: flex;
     align-self: flex-start;
-    
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: gray;
     font-size: 0.9rem;
+    padding-left: .3125rem;
 }
+
 .caracteristicas{
     margin-top: 1.25rem;
-    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: .3125rem;
 }
 
 .ver-mas{
@@ -309,14 +303,20 @@ body div {
     color: blue;
     margin-top: 1.875rem;
     margin-bottom: 1.875rem;
+    font-size: 1rem;
+    padding-left: .3125rem;
 }
+
 
 .precio{
     color: red;
     font-size: .625rem;
     display: flex;
     align-self: flex-start;
+    padding-left: .3125rem;
+    margin-bottom: .9375rem;
 }
+
 
 .precio-cantidad{
     background-color: white;
@@ -324,6 +324,7 @@ body div {
     flex-direction: row;
     justify-content: center;
 }
+
 .usd{
     margin-left: .9375rem;
     font-size: .8rem;
@@ -336,9 +337,7 @@ body div {
     font-size: 2rem;
     font-weight: bolder;
 }
-.linea{
-    color: gray;
-}
+
 
 .tarifa{
     color: gray;
@@ -348,10 +347,17 @@ body div {
 }
 
 .boton-enviar{
-    padding: 0 15px;
+    padding: 5px 20px;
     display: flex;
     margin-left: auto ;
     margin-right: auto;
     margin-top: 1.25rem;
-    
+    margin-bottom: 1.25rem;
+    background-color: rgb(114, 114, 255);
+    border-radius: 10%;
+}
+
+.boton-enviar:hover{
+    box-shadow: 2px 2px 5px gray;
+    transition-duration: 1000;
 }
