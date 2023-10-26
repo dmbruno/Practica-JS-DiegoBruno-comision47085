@@ -117,23 +117,23 @@ function login() {
             let contenedor = document.createElement("div");
             for (const destino of destinos) {
                 contenedor.innerHTML += `
-
+                <div class="contenedor-gral">
                 <div id="contenedor-card">
                 <img id="imagen" src=${destino.thumbnail} alt={destino.title}>
                 <div class="contenedor-info">
-                    <p class="paquete">Paquete</p>
-                    <h5 class="titulo">${destino.title}</h5>
-                    <p class="subtitulo">Desde Bs as</p>
-                    <p class="caracteristicas">${destino.description}</p>
-                    <p class="ver-mas"><strong>¡Ver Mas!</strong></p>
-                    <p class="precio">PRECIO POR PASAJERO</p>
-                    <div class="precio-cantidad">
-                        <p class="usd">USD</p>
-                        <p class="monto"> ${destino.price} </p>
+                        <p class="paquete">Paquete</p>
+                        <h5 class="titulo">${destino.title}</h5>
+                        <p class="subtitulo">Desde Bs as</p>
+                        <p class="caracteristicas">${destino.description}</p>
+                        <p class="ver-mas"><strong>¡Ver Mas!</strong></p>
+                        <p class="precio">PRECIO POR PASAJERO</p>
+                        <div class="precio-cantidad">
+                            <p class="usd">USD</p>
+                            <p class="monto"> ${destino.price} </p>
+                        </div>
+                        <p class="tarifa">Tarifa base doble. No incluye Impuestos</p>
+                        <button class="boton-enviar" data-id="${destino.id}">Enviar Mail</button>
                     </div>
-                    
-                    <p class="tarifa">Tarifa base doble. No incluye Impuestos</p>
-                    <button class="boton-enviar" data-id="${destino.id}">Enviar Mail</button>
                 </div>
             </div>
     `;

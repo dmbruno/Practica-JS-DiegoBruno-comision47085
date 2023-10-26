@@ -42,6 +42,8 @@
 
 }
 
+
+
 .box input {
     width: 200px;
     height: 40px;
@@ -65,15 +67,18 @@
 }
 
 .titulo1 h1 {
-
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: underline .1875rem solid rgb(31, 25, 25);
+    margin-bottom: .9375rem;
 }
 
 .formulario-correo {
     display: flex;
-    align-items: center;
     justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: .9375rem;
 }
 
 #form-viaje {
@@ -204,6 +209,7 @@
     font-weight: bold;
     font-style: italic;
     color: rgb(96, 147, 243);
+    margin: 1.5625rem;
 }
 
 .cartel{
@@ -216,17 +222,11 @@
 }
 
 
-
-
 body div {
     background-color: antiquewhite;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    align-items: center;
     justify-content: space-around;
-    margin-bottom: .9375rem;
-
 }
 
 .contenedor-info{
@@ -241,12 +241,11 @@ body div {
 
 #contenedor-card{
     background-color: white;
-    margin-left: 1.25rem;
-    margin-top: 1.25rem; 
     border: 2px solid gray;
     width: 18.75rem;
-    box-shadow: 3px 3px 5px gray;
-    
+    box-shadow: 5px 5px 5px gray;
+    gap: .625rem;
+    margin-bottom: 1.25rem;
 }
 
 #imagen{
