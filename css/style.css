@@ -56,50 +56,17 @@
     font-size: 1rem;
 }
 
-.contenedor-card {
-    margin: 20px;
-    width: 30%;
-    height: max-content;
-    border: .125rem solid gray;
-    background-color: white;
-    padding: .625rem;
-}
 
-.contenedor-img {
-    opacity: 80%;
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
-}
 
-.contenedor-img:hover {
-    opacity: 100%;
-    transition-duration: 1s;
-}
 
-.contenedor-texto {
-    background-color: white;
-    justify-content: flex-start;
-    gap: .9375rem;
-    margin: 0;
-    
-}
 
-.contenedor-texto h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
-.precio {
-    font-size: 2rem;
-    margin-right: auto;
-    font-weight: lighter;
-    margin-top: .625rem;
-}
 
-.precioM {
-    margin-left: auto;
 
-}
+
+
+
+
 
 body div {
     background-color: antiquewhite;
@@ -149,25 +116,18 @@ body div {
     height: 25px;
     color: white;
 }
-
 .desde {
     height: 25px;
     width: 100%;
-
 }
-
 .hasta {
     height: 25px;
     width: 100%;
-
 }
-
 #e-mail {
     height: 25px;
     width: 100%;
-
 }
-
 #correo {
     height: 100px;
     width: 100%;
@@ -175,29 +135,6 @@ body div {
 }
 
 
-
-.envio-mail {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    width: 100%;
-    color: #ffff;
-    padding: .625rem;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 255, 0.764);
-}
-
-.envio-mail:hover {
-    background-color: rgba(71, 163, 71, 0.75);
-}
-
-
-.contenedor-botones {
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    margin: 0;
-}
 
 
 #number {
@@ -299,3 +236,122 @@ body div {
     gap: .3125rem;
 }
 
+
+
+
+
+.contenedor-info{
+    background-color: white;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+#contenedor-card{
+    background-color: white;
+    margin-left: 1.25rem;
+    margin-top: 1.25rem;
+    border: 2px solid gray;
+    width: 22.75rem;
+    height: 42.5rem;
+    box-shadow: 3px 3px 5px gray;
+}
+
+#imagen{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    opacity: 80%;
+    }
+
+#imagen:hover{
+        opacity: 100%;
+        transition-duration: 1000ms;
+
+    }
+
+.paquete{
+    display: flex;
+    align-self: flex-start;
+    color: gray;
+    font-size: 0.9rem;
+    
+}
+
+.titulo{
+    display: flex;
+    align-self: flex-start;
+    
+    margin-top: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.subtitulo{
+    display: flex;
+    align-self: flex-start;
+    
+    color: gray;
+    font-size: 0.9rem;
+}
+.caracteristicas{
+    margin-top: 1.25rem;
+    
+}
+
+.ver-mas{
+    display: flex;
+    align-self: flex-start;
+    color: blue;
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+}
+
+.precio{
+    color: red;
+    font-size: .625rem;
+    display: flex;
+    align-self: flex-start;
+}
+
+.precio-cantidad{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.usd{
+    margin-left: .9375rem;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+}
+
+.monto{
+    margin-left: 1.25rem;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.linea{
+    color: gray;
+}
+
+.tarifa{
+    color: gray;
+    display: flex;
+    margin-left: .9375rem;
+    font-size: .9375rem;
+}
+
+.boton-enviar{
+    padding: 0 15px;
+    display: flex;
+    margin-left: auto ;
+    margin-right: auto;
+    margin-top: 1.25rem;
+    
+}

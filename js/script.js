@@ -118,23 +118,29 @@ function login() {
             for (const destino of destinos) {
                 contenedor.innerHTML += `
 
-                            <article class = "contenedor-card">
-                                <img class="contenedor-img" src= ${destino.thumbnail} alt = "imagen sobre ${destino.title}">
-                                <div class="contenedor-texto">
-                                    <h2>${destino.title}</h2>                                 
-                                    <p>${destino.description}</p>
-                                    <p class="precioM">USD</p>
-                                    <b class="precio">${destino.price}</b>
-                                        <div class="contenedor-botones">
-                                            <button type="submit" class="envio-mail" data-id=${destino.id}>Enviar Mail</button>
-                                        </div>
-                                </div>
-                            </article>
+                <div id="contenedor-card">
+                <img id="imagen" src=${destino.thumbnail} alt={destino.title}>
+                <div class="contenedor-info">
+                    <p class="paquete">Paquete</p>
+                    <h5 class="titulo">${destino.title}</h5>
+                    <p class="subtitulo">Desde Bs as</p>
+                    <p class="caracteristicas">${destino.description}</p>
+                    <p class="ver-mas"><strong>¡Ver Mas!</strong></p>
+                    <p class="precio">PRECIO POR PASAJERO</p>
+                    <div class="precio-cantidad">
+                        <p class="usd">USD</p>
+                        <p class="monto"> ${destino.price} </p>
+                    </div>
+                    
+                    <p class="tarifa">Tarifa base doble. No incluye Impuestos</p>
+                    <button class="boton-enviar" data-id="${destino.id}">Enviar Mail</button>
+                </div>
+            </div>
     `;
             }
             document.body.append(saludos);
             document.body.append(contenedor);
-            const mails = document.querySelectorAll(".envio-mail");
+            const mails = document.querySelectorAll(".boton-enviar");
             for (const mail of mails) {
                 mail.addEventListener("click", mandarMail);
             }
