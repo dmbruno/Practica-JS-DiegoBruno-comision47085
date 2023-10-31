@@ -74,6 +74,7 @@ const destinos = [
     }
 ];
 
+
 localStorage.setItem('usuarios', JSON.stringify(usuarios));//mando a guardar en local el array de datos con usuarios
 
 sessionStorage.setItem('destinos', JSON.stringify(destinos));//aca mando solo a la sesion, para que siempre levante la info mas actualizada
@@ -174,7 +175,7 @@ function login() {
             return;
         }
     }
- 
+    
 
 Toastify({
     text: "Contraseña Invalida",
@@ -233,12 +234,7 @@ function saludar() {
 
 }
 
-const input = document.querySelector("#input");
-const inputTexto = document.querySelector("#input-texto");
-input.addEventListener(`keyup`, mostrarKey);
-function mostrarKey(e) {
-    console.log(`tecla: `, e.key);
-}
+
 
 const boton2 = document.querySelector("#titulo");
 const contenidoOriginal = boton2.innerHTML;
