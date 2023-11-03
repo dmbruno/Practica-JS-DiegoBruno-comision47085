@@ -19,7 +19,7 @@ const usuarios = [{
 {
     id: 'admin',
     password: 1234,
-    
+
 },
 {
     id: 'Lucia',
@@ -85,7 +85,10 @@ const iniciar = document.getElementById('inicio-sesion');
 iniciar.addEventListener('click', inicioSesion);
 
 function inicioSesion() {
+    const main = document.querySelector('#main');
+
     const inicioSesion = document.createElement("div");
+
     inicioSesion.innerHTML =
         `
         <section class="conteiner-sesion">
@@ -96,7 +99,7 @@ function inicioSesion() {
             <button type="submit" id="btnIngresar">Ingresar</button>
         </section>
         `
-    document.body.append(inicioSesion);
+    main.appendChild(inicioSesion)
     const ingresar = document.querySelector('#btnIngresar');
     ingresar.addEventListener('click', login);
 
@@ -116,22 +119,23 @@ function login() {
                 `;
 
             let contenedor = document.createElement("div");
+
             for (const destino of destinos) {
                 contenedor.innerHTML += `
-                <div class="contenedor-gral">
-                <div id="contenedor-card">
-                <img id="imagen" src=${destino.thumbnail} alt={destino.title}>
-                <div class="contenedor-info">
+            <div class="contenedor-gral">
+                    <div id="contenedor-card">
+                        <img id="imagen" src=${destino.thumbnail} alt={destino.title}>
+                    <div class="contenedor-info">
                         <p class="paquete">Paquete</p>
                         <h5 class="titulo">${destino.title}</h5>
                         <p class="subtitulo">Desde Bs as</p>
                         <p class="caracteristicas">${destino.description}</p>
                         <p class="ver-mas"><strong>¡Ver Mas!</strong></p>
                         <p class="precio">PRECIO POR PASAJERO</p>
-                        <div class="precio-cantidad">
-                            <p class="usd">USD</p>
-                            <p class="monto"> ${destino.price} </p>
-                        </div>
+                            <div class="precio-cantidad">
+                                <p class="usd">USD</p>
+                                <p class="monto"> ${destino.price} </p>
+                            </div>
                         <p class="tarifa">Tarifa base doble. No incluye Impuestos</p>
                         <button class="boton-enviar" data-id="${destino.id}">Enviar Mail</button>
                     </div>
@@ -139,14 +143,13 @@ function login() {
             </div>
     `;
             }
-            document.body.append(saludos);
-            document.body.append(contenedor);
+            main.appendChild(saludos);
+            main.appendChild(contenedor);
             const mails = document.querySelectorAll(".boton-enviar");
             for (const mail of mails) {
                 mail.addEventListener("click", mandarMail);
             }
             function mandarMail() {
-                
                 const formularioMail = document.createElement("div");
                 formularioMail.innerHTML = `
                     <div class="formulario-correo">
@@ -169,21 +172,23 @@ function login() {
                         </form>
                     </div>
                             `
-                document.body.append(formularioMail);
+                main.appendChild(formularioMail);
+                contenedor.remove();
             }
-            document.querySelector('.conteiner-sesion').remove(); 
+            document.querySelector('.conteiner-sesion').remove();
             return;
         }
+        
     }
-    
 
-Toastify({
-    text: "Contraseña Invalida",
-    duration: 3000,
-    gravity: "top",
-    stopOnFocus: true,
-    close: true,
-    className: "cartel",
+
+    Toastify({
+        text: "Contraseña Invalida",
+        duration: 3000,
+        gravity: "top",
+        stopOnFocus: true,
+        close: true,
+        className: "cartel",
     }).showToast();
 }
 
@@ -230,7 +235,7 @@ function saludar() {
         stopOnFocus: true,
         close: true,
         className: "cartel",
-        }).showToast();
+    }).showToast();
 
 }
 

@@ -9,22 +9,20 @@
     <title>Document</title>
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
-    
-
 
 </head>
 
-<body>
+<body class="body">
     <header class="contenedor-navbar">
-        <section class="logo">
-            <img src="./assets/img/UBM.jpg" alt="UBM logo">
-        </section>
         <ul>
             <li class="navbar">
-                <a id="cuenta" href="">Crea una cuenta</a>
+                <button id="inicio-cuenta" href="">Crea una cuenta</button>
                 <button id="inicio-sesion" href="">Iniciar Sesion</button>
             </li>
         </ul>
+        <section class="logo">
+            <img src="./assets/img/UBM.jpg" alt="UBM logo">
+        </section>
         <section class="contenedor-body">
             <form action="" class="box" id="formulario-texto">
                 <input type="text" placeholder="Ingresa tu destino..." id="input">
@@ -35,23 +33,23 @@
             </form>
         </section>
     </header>
-<body>
+    <main id="main">
 
-    <div class="box">
-        <h2 id="user"></h2>
-    </div>
-    <div class="titulo1">
-        <h1 id="titulo">Salidas Imperdibles!!</h1>
-        <p id="parrafo-vacio"></p>
-    </div>
+        <div class="contenedor-titulo">
+            <h1 id="titulo">¡Salidas Imperdibles!</h1>
+        </div>
+        <div id="vacio"></div>
+     
 
-    <!-- toastify -->
+    </main>
+    
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <!-- sweetgalery -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- js -->
     <script src="./js/script.js"></script>
-
+    <footer class="footer">
+        <p class="derechos">Derechos Reservados UBM S.R.L</p>
+        <p>Contactanos</p>
+    </footer>
 </body>
 
 </html>

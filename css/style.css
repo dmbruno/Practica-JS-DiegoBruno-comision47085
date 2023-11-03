@@ -9,16 +9,20 @@
 .navbar {
     padding-right: 6.25rem;
     list-style: none;
-    width: 20rem;
+    width: 37.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-left: 15px;
+    gap: 3.125rem;
+    
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
     list-style: none;
+    
+    
 
 }
 
@@ -26,20 +30,28 @@
     height: 6.25rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.954);
+}
+
+
+.body{
+    background-color:antiquewhite;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .contenedor-body {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end; 
     width: 100%;
     height: 3.125rem;
     font-size: 1.5rem;
     padding-left: 1.25rem;
     gap: .625rem;
-
+    padding: .9375rem;
 }
 
 
@@ -58,20 +70,34 @@
     font-size: 1rem;
 }
 
-
-
-
-.titulo1 {
+.contenedor-gral{
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+    height: max-content;
+
+}
+#contenedor-card{
+    
+    background-color: white;
+    border: 2px solid gray;
+    width: 310px;
+    box-shadow: 5px 5px 5px gray;
+    gap: .625rem;
+    margin-bottom: 1.25rem;
+    
+    
 }
 
-.titulo1 h1 {
+.contenedor-titulo h1 {
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration: underline .1875rem solid rgb(31, 25, 25);
+    font-family: monospace; 
+    font-style: oblique;
     margin-bottom: .9375rem;
+    font-size: 48px;
+    
 }
+
 
 .formulario-correo {
     display: flex;
@@ -121,6 +147,7 @@
 
 
 
+
 #number {
     width: max-content;
     height: max-content;
@@ -164,12 +191,24 @@
 }
 
 #inicio-sesion {
-    padding: 7px;
+    background-color: rgba(127, 245, 245, 0.869);
+    font-size: 1rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(187, 180, 180);
-
+    padding: 5px 15px;
 }
 
+#inicio-cuenta{
+    background-color: rgba(127, 245, 245, 0.869);
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+#inicio-cuenta:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(220, 210, 210, 0.76);
+    transition: 300ms;
+}
 #inicio-sesion:hover {
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(220, 210, 210, 0.76);
@@ -196,12 +235,8 @@
     color: rgb(6, 34, 147);
 }
 
-#btnIngresar:hover {
-    background-color: rgba(204, 246, 204, 0.714);
-    box-shadow: .3125rem;
-    transition: 300ms;
-    cursor: pointer;
-}
+
+
 
 
 .saludo {
@@ -222,12 +257,40 @@
 }
 
 
-body div {
+
+
+
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.954);
+    color: white;
+    width: 100%;
+    height: 9.375rem;
+    display: flex;
+    align-items: center;
+    gap: .9375rem;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+
+}
+
+.derechos{
+    border-right: 2px solid white;
+    padding-right: .9375rem;
+}
+
+div {
     background-color: antiquewhite;
     display: flex;
     flex-wrap: wrap;
+    gap: 15px;
     justify-content: space-around;
-}
+    height: max-content;
+    
+} 
 
 .contenedor-info{
     background-color: white;
@@ -239,14 +302,7 @@ body div {
 }
 
 
-#contenedor-card{
-    background-color: white;
-    border: 2px solid gray;
-    width: 18.75rem;
-    box-shadow: 5px 5px 5px gray;
-    gap: .625rem;
-    margin-bottom: 1.25rem;
-}
+
 
 #imagen{
     padding: .125rem;
@@ -339,7 +395,6 @@ body div {
     font-weight: bolder;
 }
 
-
 .tarifa{
     color: gray;
     display: flex;
@@ -360,5 +415,6 @@ body div {
 
 .boton-enviar:hover{
     box-shadow: 2px 2px 5px gray;
-    transition-duration: 1000;
+    
 }
+
