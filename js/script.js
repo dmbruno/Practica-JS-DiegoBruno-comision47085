@@ -40,35 +40,64 @@ const destinos = [
     {
         id: `Mexico`,
         title: `Rivera Maya`,
-        description: `La Riviera Maya es una hermosa región costera en México que cuenta con muchas playas impresionantes`,
+        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
         thumbnail: `https://images.unsplash.com/photo-1616423841125-8307665a0469?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80`,
         price: 1000
     },
     {
         id: `Nepal`,
         title: `Nepal`,
-        description: `Nepal es un país multicultural y multilingüe ubicado en Asia del Sur, entre India y China `,
+        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
         thumbnail: `https://images.unsplash.com/photo-1571401835393-8c5f35328320?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80`,
         price: 1200
     },
     {
         id: `Tailandia`,
         title: `Tailandia`,
-        description: `Tailandia es un país conocido por sus hermosas playas, que atraen a turistas de todo el mundo`,
+        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
         thumbnail: `https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
         price: 1300
     },
     {
         id: `New York`,
         title: `NYC`,
-        description: `Nueva York es una ciudad vibrante y emocionante que atrae a turistas de todo el mundo.`,
+        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
         thumbnail: `https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
         price: 1300
     },
     {
         id: `Paris`,
         title: `Paris`,
-        description: `París es una ciudad hermosa y vibrante que atrae a turistas de todo el mundo. La ciudad es conocida por su rica historiay su arquitectura impresionante`,
+        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
+        thumbnail: `https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
+        price: 1300
+    }
+    ,
+    {
+        id: `Paris`,
+        title: `Paris`,
+        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
+        thumbnail: `https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
+        price: 1300
+    },
+    {
+        id: `Paris`,
+        title: `Paris`,
+        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
+        thumbnail: `https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
+        price: 1300
+    },
+    {
+        id: `Paris`,
+        title: `Paris`,
+        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
+        thumbnail: `https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
+        price: 1300
+    },
+    {
+        id: `Paris`,
+        title: `Paris`,
+        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
         thumbnail: `https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
         price: 1300
     }

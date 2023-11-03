@@ -84,9 +84,7 @@
     width: 310px;
     box-shadow: 5px 5px 5px gray;
     gap: .625rem;
-    margin-bottom: 1.25rem;
-    
-    
+    margin-bottom: .9375rem;
 }
 
 .contenedor-titulo h1 {
@@ -286,23 +284,19 @@ div {
     background-color: antiquewhite;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
     justify-content: space-around;
     height: max-content;
-    
+    padding: .3125rem;
 } 
 
 .contenedor-info{
     background-color: white;
     width: max-content;
-    height: max-content;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     
 }
-
-
-
 
 #imagen{
     padding: .125rem;
