@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
 .nav-bar {
     padding-right: 6.25rem;
     list-style: none;
@@ -14,18 +12,13 @@
     justify-content: center;
     margin-left: 15px;
     gap: 3.125rem;
-    
 }
 
 .nav-bar a {
     color: white;
     text-decoration: none;
     list-style: none;
-    
-    
-
 }
-
 .conte-navbar {
     height: 6.25rem;
     display: flex;
@@ -34,14 +27,12 @@
     background-color: rgba(0, 0, 0, 0.954);
 }
 
-
 .body{
     background-color:antiquewhite;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-
 .conte-body {
     display: flex;
     align-items: center;
@@ -54,8 +45,6 @@
     padding: .9375rem;
     
 }
-
-
 
 .box input {
     width: 200px;
@@ -96,8 +85,6 @@
     font-size: 48px;
     
 }
-
-
 .formulario-correo {
     display: flex;
     justify-content: center;
@@ -140,12 +127,7 @@
 #correo {
     height: 100px;
     width: 100%;
-
 }
-
-
-
-
 
 #number {
     width: max-content;
@@ -218,11 +200,9 @@
     height: 25px;
     width: 300px;
     padding: .3125rem;
-
 }
 
 #nombreUsuario {
-
     width: 300px;
     height: 25px;
     padding: .3125rem;
@@ -233,10 +213,6 @@
     font-weight: bold;
     color: rgb(6, 34, 147);
 }
-
-
-
-
 
 .saludo {
     font-size: 40px;
@@ -254,11 +230,6 @@
     align-items: center;
     gap: .3125rem;
 }
-
-
-
-
-
 
 .footer{
     background-color: rgba(0, 0, 0, 0.954);

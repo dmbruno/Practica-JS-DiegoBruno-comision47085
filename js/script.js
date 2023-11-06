@@ -1,21 +1,21 @@
 
 
 const iniciar = document.getElementById('inicio-sesion');
-iniciar.addEventListener('click', inicioSesion); 
+iniciar.addEventListener('click', inicioSesion);
 const ApiUsuarios = './js/ApiUsuarios.json'
 function getData() {
     fetch(ApiUsuarios)
-    .then(res => {
-        if (!res.ok) {
-            throw new error('error throw')
-        }
-    })
-    .then(data => {
-        inicioSesion();
-        login()
-        .catch(error => console.log('hubo un error', error));
-    })
-    
+        .then(res => {
+            if (!res.ok) {
+                throw new error('error throw')
+            }
+        })
+        .then(data => {
+            inicioSesion();
+            login()
+                .catch(error => console.log('hubo un error', error));
+        })
+
 }
 getData();
 
@@ -86,7 +86,7 @@ async function login() {
             main.appendChild(saludos);
             main.appendChild(contenedor);
             const mails = document.querySelectorAll(".boton-enviar");
-            
+
             for (const mail of mails) {
                 mail.addEventListener("click", mandarMail);
             }
@@ -119,7 +119,7 @@ async function login() {
             document.querySelector('.conteiner-sesion').remove();
             return;
         }
-        
+
     }
 
     Toastify({
