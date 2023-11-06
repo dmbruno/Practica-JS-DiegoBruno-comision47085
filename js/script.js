@@ -1,123 +1,27 @@
-/* EL OBJETIVO DEL PROYECTO ES "LEVANTAR" LA INFO DE UN PROVEEDOR DE LA AGENCIA DE MI MUJER
-PARA DE ESTA MANERA TRANSFORMAR TODA ESA INFO EN CARDS (ESTILADAS CON LA TIPOGRAFIA DE LA AGENCIA) Y PODER PROMOCIONAR
-POR LAS DISTINTAS REDES, ES DECIR QUE AL VER LAS CARDS, SI EL PASAJERO ESTA INTERESADO LO QUE HACE ES
-ENVIAR UN CORREO CON SUS DATOS Y SU CONSULTA, DE ESTA MANERA PODEMOS CONFECCIONAR BASE DE DATOS DE CLIENTES DE LA AGENCIA
-Y ADEMAS ORGANIZAR LOS PRESUPUESTOS POR DESTINOS ETC ETC */
-
-const usuarios = [{
-    id: 'Florencia',
-    password: 1234,
-},
-{
-    id: 'Paz',
-    password: 1234,
-},
-{
-    id: 'Agustina',
-    password: 1234,
-},
-{
-    id: 'admin',
-    password: 1234,
-
-},
-{
-    id: 'Lucia',
-    password: 1234,
-
-}];
-
-//array de destinos , QUE DEBERIA SER LA INFO A SUSTRAER DE LA PAGINA DEL PROVEEDOR 
-const destinos = [
-    {
-        id: `Brasil`,
-        title: `Rio De Janeiro`,
-        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura. 
-        `,
-        thumbnail: `https://images.unsplash.com/photo-1473116763249-2faaef81ccda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80`,
-        price: 900
-    },
-    {
-        id: `Mexico`,
-        title: `Rivera Maya`,
-        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
-        thumbnail: `https://images.unsplash.com/photo-1616423841125-8307665a0469?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80`,
-        price: 1000
-    },
-    {
-        id: `Nepal`,
-        title: `Nepal`,
-        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
-        thumbnail: `https://images.unsplash.com/photo-1571401835393-8c5f35328320?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80`,
-        price: 1200
-    },
-    {
-        id: `Tailandia`,
-        title: `Tailandia`,
-        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
-        thumbnail: `https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
-        price: 1300
-    },
-    {
-        id: `New York`,
-        title: `NYC`,
-        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
-        thumbnail: `https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
-        price: 1300
-    },
-    {
-        id: `Paris`,
-        title: `Paris`,
-        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
-        thumbnail: `https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
-        price: 1300
-    }
-    ,
-    {
-        id: `Paris`,
-        title: `Paris`,
-        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
-        thumbnail: `https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
-        price: 1300
-    },
-    {
-        id: `Paris`,
-        title: `Paris`,
-        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
-        thumbnail: `https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
-        price: 1300
-    },
-    {
-        id: `Paris`,
-        title: `Paris`,
-        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
-        thumbnail: `https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
-        price: 1300
-    },
-    {
-        id: `Paris`,
-        title: `Paris`,
-        description: `Brasil es conocido por sus playas, que atraen a turistas de todo el mundo. Las playas de Brasil son famosas por su belleza natural, su ambiente relajado y su vibrante cultura`,
-        thumbnail: `https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80`,
-        price: 1300
-    }
-];
-
-
-localStorage.setItem('usuarios', JSON.stringify(usuarios));//mando a guardar en local el array de datos con usuarios
-
-sessionStorage.setItem('destinos', JSON.stringify(destinos));//aca mando solo a la sesion, para que siempre levante la info mas actualizada
-
 
 
 const iniciar = document.getElementById('inicio-sesion');
-iniciar.addEventListener('click', inicioSesion);
+iniciar.addEventListener('click', inicioSesion); 
+const ApiUsuarios = './js/ApiUsuarios.json'
+function getData() {
+    fetch(ApiUsuarios)
+    .then(res => {
+        if (!res.ok) {
+            throw new error('error throw')
+        }
+    })
+    .then(data => {
+        inicioSesion();
+        login()
+        .catch(error => console.log('hubo un error', error));
+    })
+    
+}
+getData();
 
 function inicioSesion() {
     const main = document.querySelector('#main');
-
     const inicioSesion = document.createElement("div");
-
     inicioSesion.innerHTML =
         `
         <section class="conteiner-sesion">
@@ -131,12 +35,19 @@ function inicioSesion() {
     main.appendChild(inicioSesion)
     const ingresar = document.querySelector('#btnIngresar');
     ingresar.addEventListener('click', login);
-
 }
 
-function login() {
-    const nombreUsuario = document.getElementById('nombreUsuario').value;
-    const contraseñaUsuario = parseInt(document.getElementById('contraseñaUsuario').value);
+async function login() {
+    const nombreUsuario = document.getElementById('nombreUsuario').value; //tomo el valor del imput
+    const contraseñaUsuario = parseInt(document.getElementById('contraseñaUsuario').value);//tomo el valor del imput
+    localStorage.setItem('user', nombreUsuario); //guardo solo usarios en el local storage
+
+    const responseUsuarios = await fetch('./js/ApiUsuarios.json'); //se aguarda la respuesta del fetch y se guarda en responseUsuarios
+    const usuarios = await responseUsuarios.json();// se lee la respuesta del .json y se guarda en usuarios
+
+    const responseDestinos = await fetch('./js/ApiDestinos.json');// se aguarda la respuesta del fetch y se guarda en responseDestinos
+    const destinos = await responseDestinos.json();// luego se guarda esta info en la variable destinos 
+
 
     for (const usuario of usuarios) {
         if (usuario.id === nombreUsuario && usuario.password === contraseñaUsuario) {
@@ -209,7 +120,6 @@ function login() {
         }
         
     }
-
 
     Toastify({
         text: "Contraseña Invalida",
