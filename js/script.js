@@ -29,7 +29,7 @@ function inicioSesion() {
             <input type="text" id="nombreUsuario" placeholder="Ingresa tu Usuario..." required>
             <label for="nombre" id="usuario">Contraseña</label>
             <input type="password" id="contraseñaUsuario" placeholder="Ingresa tu Contraseña..." required>
-            <button type="submit" id="btnIngresar">Ingresar</button>
+            <button type="submit" id="btnIngresar" class="btn btn-success">Ingresar</button>
         </section>
         `
     main.appendChild(inicioSesion)
@@ -86,6 +86,7 @@ async function login() {
             main.appendChild(saludos);
             main.appendChild(contenedor);
             const mails = document.querySelectorAll(".boton-enviar");
+            
             for (const mail of mails) {
                 mail.addEventListener("click", mandarMail);
             }
@@ -108,7 +109,7 @@ async function login() {
                             <input type="text" id="e-mail" placeholder="Ingresa tu correo electronico..." required>
                             <label for="correo" class="nombre">Mandanos aca tus dudas...</label>
                             <input type="text" id="correo" placeholder="Gracais por elegirnos, ingresa tu consulta y te responderemos via mail a la brevedad." required>
-                            <button class="botonMail">Enviar Consulta</button>
+                            <button class="btn btn-primary">Enviar Consulta</button>
                         </form>
                     </div>
                             `
@@ -177,7 +178,6 @@ function saludar() {
     }).showToast();
 
 }
-
 
 
 const boton2 = document.querySelector("#titulo");

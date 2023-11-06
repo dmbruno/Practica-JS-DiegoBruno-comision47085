@@ -6,7 +6,7 @@
 
 
 
-.navbar {
+.nav-bar {
     padding-right: 6.25rem;
     list-style: none;
     width: 37.5rem;
@@ -17,7 +17,7 @@
     
 }
 
-.navbar a {
+.nav-bar a {
     color: white;
     text-decoration: none;
     list-style: none;
@@ -26,7 +26,7 @@
 
 }
 
-.contenedor-navbar {
+.conte-navbar {
     height: 6.25rem;
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@
     min-height: 100vh;
 }
 
-.contenedor-body {
+.conte-body {
     display: flex;
     align-items: center;
     justify-content: flex-end; 
@@ -52,6 +52,7 @@
     padding-left: 1.25rem;
     gap: .625rem;
     padding: .9375rem;
+    
 }
 
 
