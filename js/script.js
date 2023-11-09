@@ -19,7 +19,8 @@ function getData() {
 }
 getData();
 
-function inicioSesion() {
+function inicioSesion(event) {
+    event.preventDefault();
     const main = document.querySelector('#main');
     const inicioSesion = document.createElement("div");
     inicioSesion.innerHTML =

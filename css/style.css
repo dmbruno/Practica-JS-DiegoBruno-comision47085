@@ -171,12 +171,7 @@
     background-color: rgba(61, 61, 240, 0.518);
 }
 
-#inicio-sesion {
-    background-color: rgba(127, 245, 245, 0.869);
-    font-size: 1rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 5px 15px;
-}
+
 
 #inicio-cuenta{
     background-color: rgba(127, 245, 245, 0.869);
@@ -195,6 +190,22 @@
     box-shadow: 2px 2px 5px rgba(220, 210, 210, 0.76);
     transition: 300ms;
 }
+.navbar-f{
+    padding: 10px 1.5625rem;
+    gap: 15px;
+    width: 31.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-style: oblique;
+}
+
+
+
+
+
+
 
 #contraseñaUsuario {
     height: 25px;

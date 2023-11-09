@@ -15,25 +15,34 @@
 </head>
 
 <body class="body">
-    <header class="conte-navbar">
-        <ul>
-            <li class="nav-bar">
-                <button class="btn btn-primary" id="inicio-cuenta" href="">Crea una cuenta</button>
-                <button class="btn btn-primary" id="inicio-sesion" href="">Iniciar Sesion</button>
-            </li>
-        </ul>
-        <section class="logo">
-            <img src="./assets/img/UBM.jpg" alt="UBM logo">
-        </section>
-        <section class="conte-body">
-            <form action="" class="box" id="formulario-texto">
-                <input type="text" placeholder="Ingresa tu destino..." id="input">
-                <p id="input-texto"></p>
-            </form>
-            <form action="" id="boton">
-                <input class="btn btn-info" type="button" value="Buscar">
-            </form>
-        </section>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="./assets/img/UBM.jpg" alt="logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-f">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="inicio-sesion">Iniciar Sesion</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Nosotros</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Busca tu destino" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" id="boton">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
     </header>
     <main id="main">
 
