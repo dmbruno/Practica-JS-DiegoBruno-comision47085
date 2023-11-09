@@ -124,7 +124,7 @@ async function login() {
     }
 
     Toastify({
-        text: "Contraseña Invalida",
+        text: "Revise los datos ingresados",
         duration: 3000,
         gravity: "top",
         stopOnFocus: true,
@@ -166,9 +166,10 @@ async function login() {
 
 
 //ESTAS SON FUNCIONES QUE TENGO EN PROCESO DE CONSTRUCCION, PERO ESTAN FUNCIONANDO CON INFO FALSA - DESESTIMAR
-const btn = document.querySelector("#boton");
-btn.addEventListener("click", saludar);
+const btnb = document.querySelector("#boton");
+btnb.addEventListener("click", saludar);
 function saludar() {
+    event.preventDefault();
     Toastify({
         text: "Estas Seguro con el USD en 1050?",
         duration: 3000,
@@ -198,9 +199,3 @@ function restaurarHtml() {
     boton2.innerHTML = contenidoOriginal;
 }
 
-const input2 = document.querySelector(`#input`);
-const inputexto = document.querySelector(`#parrafo-vacio`);
-input2.addEventListener(`input`, agregandoTexto);
-function agregandoTexto() {
-    inputexto.innerHTML = input.value;
-}
